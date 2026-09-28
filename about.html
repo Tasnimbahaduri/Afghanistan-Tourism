@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn about Afghanistan Tourism, its purpose, culture, history and natural beauty.">
+
+    <title>About | Afghanistan Tourism</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        /* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #245c45;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 25px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #555555;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2f7d5b;
+}
+
+.nav-links a.active {
+    color: #2f7d5b;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    min-height: 430px;
+
+    background:
+        linear-gradient(rgba(36, 92, 69, 0.72),
+            rgba(36, 92, 69, 0.72)),
+        url("images/afghanistan.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.about-subtitle {
+    color: #dcece4;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.about-hero p:last-child {
+    color: #f2f8f5;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   COMMON SECTION SUBTITLE
+========================================= */
+
+.section-subtitle {
+    color: #2f7d5b;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   WHO WE ARE / INTRO
+========================================= */
+
+.about-intro {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Image */
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Text */
+
+.about-text {
+    max-width: 550px;
+}
+
+.about-text h2 {
+    color: #222222;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+}
+
+.about-text p:not(.section-subtitle) {
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   OUR PURPOSE
+========================================= */
+
+.about-purpose {
+    background: #eaf5ef;
+
+    padding: 90px 25px;
+
+    text-align: center;
+}
+
+.purpose-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.purpose-content h2 {
+    color: #245c45;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.purpose-content p:not(.section-subtitle) {
+    color: #5f6f67;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   DISCOVER SECTION
+========================================= */
+
+.discover-section {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.discover-section>h2 {
+    color: #222222;
+
+    font-size: 40px;
+
+    margin-bottom: 50px;
+}
+
+
+/* Cards */
+
+.discover-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.discover-card {
+    background: #ffffff;
+
+    padding: 40px 30px;
+
+    border: 1px solid #edf0ee;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.discover-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Icons */
+
+.discover-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #eaf5ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+/* Card title */
+
+.discover-card h3 {
+    color: #245c45;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Card paragraph */
+
+.discover-card p {
+    color: #666666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.about-cta {
+    background: #245c45;
+
+    padding: 80px 25px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.about-cta p {
+    color: #dcece4;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+.about-cta a {
+    display: inline-block;
+
+    background: #ffffff;
+
+    color: #245c45;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.about-cta a:hover {
+    background: #eaf5ef;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #f7f9f8;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+footer p {
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .discover-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    /* Navbar */
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .about-hero {
+        min-height: 380px;
+
+        padding: 50px 20px;
+    }
+
+    .about-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+    }
+
+    .about-hero p:last-child {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .about-intro {
+        padding: 70px 20px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+
+    /* Purpose */
+
+    .about-purpose {
+        padding: 70px 20px;
+    }
+
+    .purpose-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* Discover */
+
+    .discover-section {
+        padding: 70px 20px;
+    }
+
+    .discover-section>h2 {
+        font-size: 30px;
+    }
+
+    .discover-cards {
+        grid-template-columns: 1fr;
+    }
+
+    
+    /* Mobile */
+
+    @media (max-width: 900px) {
+
+        .cost-cards {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .cost-cards {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* CTA */
+
+    .about-cta {
+        padding: 65px 20px;
+    }
+
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+    .about-cta p {
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #245c45;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 25px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #555555;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2f7d5b;
+}
+
+.nav-links a.active {
+    color: #2f7d5b;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    min-height: 430px;
+
+    background:
+        linear-gradient(rgba(36, 92, 69, 0.72),
+            rgba(36, 92, 69, 0.72)),
+        url("images/afghanistan.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.about-subtitle {
+    color: #dcece4;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.about-hero p:last-child {
+    color: #f2f8f5;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   COMMON SECTION SUBTITLE
+========================================= */
+
+.section-subtitle {
+    color: #2f7d5b;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   WHO WE ARE / INTRO
+========================================= */
+
+.about-intro {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Image */
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Text */
+
+.about-text {
+    max-width: 550px;
+}
+
+.about-text h2 {
+    color: #222222;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+}
+
+.about-text p:not(.section-subtitle) {
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   OUR PURPOSE
+========================================= */
+
+.about-purpose {
+    background: #eaf5ef;
+
+    padding: 90px 25px;
+
+    text-align: center;
+}
+
+.purpose-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.purpose-content h2 {
+    color: #245c45;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.purpose-content p:not(.section-subtitle) {
+    color: #5f6f67;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   DISCOVER SECTION
+========================================= */
+
+.discover-section {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.discover-section>h2 {
+    color: #222222;
+
+    font-size: 40px;
+
+    margin-bottom: 50px;
+}
+
+
+/* Cards */
+
+.discover-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.discover-card {
+    background: #ffffff;
+
+    padding: 40px 30px;
+
+    border: 1px solid #edf0ee;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.discover-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Icons */
+
+.discover-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #eaf5ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+/* Card title */
+
+.discover-card h3 {
+    color: #245c45;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Card paragraph */
+
+.discover-card p {
+    color: #666666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.about-cta {
+    background: #245c45;
+
+    padding: 80px 25px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.about-cta p {
+    color: #dcece4;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+.about-cta a {
+    display: inline-block;
+
+    background: #ffffff;
+
+    color: #245c45;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.about-cta a:hover {
+    background: #eaf5ef;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #f7f9f8;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+footer p {
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .discover-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    /* Navbar */
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .about-hero {
+        min-height: 380px;
+
+        padding: 50px 20px;
+    }
+
+    .about-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+    }
+
+    .about-hero p:last-child {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .about-intro {
+        padding: 70px 20px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+
+    /* Purpose */
+
+    .about-purpose {
+        padding: 70px 20px;
+    }
+
+    .purpose-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* Discover */
+
+    .discover-section {
+        padding: 70px 20px;
+    }
+
+    .discover-section>h2 {
+        font-size: 30px;
+    }
+
+    .discover-cards {
+        grid-template-columns: 1fr;
+    }
+
+    
+    /* Mobile */
+
+    @media (max-width: 900px) {
+
+        .cost-cards {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .cost-cards {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* CTA */
+
+    .about-cta {
+        padding: 65px 20px;
+    }
+
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+    .about-cta p {
+        font-size: 16px;
+    }
+
+}
+
+/* =========================
+   TRAVEL COSTS
+========================= */
+
+.travel-costs {
+    padding: 80px 30px;
+    background-color: #f5faf7;
+    text-align: center;
+}
+
+.travel-costs h2 {
+    color: #1f2924;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.cost-description {
+    color: #66716b;
+    margin-bottom: 40px;
+}
+
+.cost-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cost-card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 1px solid #e4ebe7;
+}
+
+.cost-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+
+    background-color: #eaf5ef;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+}
+
+.cost-card h3 {
+    color: #1f2924;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.cost-price {
+    color: #2f7d5b;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cost-card span {
+    color: #777;
+    font-size: 13px;
+}
+
+.price-note {
+    color: #777;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+
+    .cost-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .travel-costs {
+        padding: 60px 20px;
+    }
+
+    .travel-costs h2 {
+        font-size: 28px;
+    }
+
+    .cost-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <header class="relative z-50 max-w-9xl mx-auto px-4">
+
+    <div class="relative
+            bg-white/70
+            backdrop-blur-2xl
+            border border-white/60
+            shadow-xl shadow-[#1F2924]/10
+            rounded-2xl
+            px-5 md:px-7
+            py-3">
+
+        <!-- Decorative Glow -->
+        <div class="absolute -top-10 -right-10
+                w-32 h-32
+                bg-[#2F7D5B]/20
+                rounded-full
+                blur-3xl
+                pointer-events-none">
+        </div>
+
+        <!-- Header Content -->
+        <div class="relative flex items-center justify-between gap-6">
+
+            <!-- ================= LOGO ================= -->
+            <a href="#" class="flex items-center gap-3 shrink-0">
+
+                <!-- Logo Icon -->
+                <div class="w-11 h-11
+                        rounded-xl
+                        bg-[#2F7D5B]
+                        flex items-center justify-center
+                        shadow-md shadow-[#2F7D5B]/30">
+
+                    <span class="text-white text-xl font-black">
+                        AF
+                    </span>
+
+                </div>
+
+                <!-- Logo Text -->
+                <div class="leading-none">
+
+                    <h1 class="text-2xl md:text-3xl
+                           font-black
+                           tracking-[0.18em]
+                           text-[#1F2924]">
+                        AF TOURISM
+                    </h1>
+
+                    <p class="text-[9px]
+                          tracking-[0.3em]
+                          text-[#66716B]
+                          mt-1">
+                        AFGHANISTAN
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- ================= NAVIGATION ================= -->
+            <nav class="hidden md:flex items-center gap-1">
+
+                <a href="home.html" class="px-4 py-2
+                      rounded-xl
+                      text-sm font-semibold
+                      text-[#66716B]
+                      hover:bg-[#EAF5EF]
+                      hover:text-[#1F2924]
+                      transition-all duration-300">
+                    Home
+                </a>
+
+                <a href="Tours.html" class="px-4 py-2
+                      rounded-xl
+                      text-sm font-semibold
+                      text-[#66716B]
+                      hover:bg-[#EAF5EF]
+                      hover:text-[#1F2924]
+                      transition-all duration-300">
+                    Tours
+                </a>
+
+                <a href="gallery.html" class="px-4 py-2
+                      rounded-xl
+                      text-sm font-semibold
+                      text-[#66716B]
+                      hover:bg-[#EAF5EF]
+                      hover:text-[#1F2924]
+                      transition-all duration-300">
+                    Gallery
+                </a>
+
+                <a href="culture.html" class="px-4 py-2
+                      rounded-xl
+                      text-sm font-semibold
+                      text-[#66716B]
+                      hover:bg-[#EAF5EF]
+                      hover:text-[#1F2924]
+                      transition-all duration-300">
+                    Culture
+                </a>
+
+                <a href="about.html" class="px-4 py-2
+                      rounded-xl
+                      text-sm font-semibold
+                      text-[#66716B]
+                      hover:bg-[#EAF5EF]
+                      hover:text-[#1F2924]
+                      transition-all duration-300">
+                    About
+                </a>
+
+            </nav>
+
+            <!-- ================= RIGHT SIDE ================= -->
+            <div class="flex items-center gap-2">
+
+                <!-- Language -->
+                <button class="hidden sm:flex items-center gap-2
+                       px-3 py-2
+                       rounded-xl
+                       border border-[#EAF5EF]
+                       bg-[#F5FAF7]/70
+                       text-sm font-semibold
+                       text-[#66716B]
+                       hover:bg-[#EAF5EF]
+                       transition-all duration-300">
+
+                    <span>🌐</span>
+                    <span>EN</span>
+
+                </button>
+
+                <!-- Mobile Menu -->
+                <button class="md:hidden
+                       w-10 h-10
+                       rounded-xl
+                       bg-[#EAF5EF]
+                       border border-[#EAF5EF]
+                       flex items-center
+                       justify-center
+                       text-[#66716B]
+                       text-xl">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+    
+
+    
+    <!-- ===== Main Content ===== -->
+
+    <main>
+
+
+        <!-- ===== About Hero ===== -->
+
+        <section class="about-hero">
+
+            <div class="about-hero-content">
+
+                <p class="about-subtitle">
+                    ABOUT AFGHANISTAN TOURISM
+                </p>
+
+                <h1>
+                    Discover the Story of Afghanistan
+                </h1>
+
+                <p>
+                    Explore the history, culture, nature and
+                    hidden beauty of Afghanistan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===== Who We Are ===== -->
+
+        <section class="about-intro">
+
+            <div class="about-image">
+
+                <img src="images/afghanistan.jpg" alt="Beautiful landscape of Afghanistan">
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p class="section-subtitle">
+                    WHO WE ARE
+                </p>
+
+                <h2>
+                    Welcome to Afghanistan Tourism
+                </h2>
+
+                <p>
+                    Afghanistan Tourism is a website created to
+                    introduce the beauty, history, culture and
+                    natural landscapes of Afghanistan.
+                </p>
+
+                <p>
+                    From the ancient city of Balkh to the beautiful
+                    mountains of Bamyan and Nuristan, Afghanistan
+                    has many unique places waiting to be discovered.
+                </p>
+
+                <p>
+                    Our goal is to provide visitors with a simple
+                    and informative way to explore different
+                    destinations across Afghanistan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===== Our Purpose ===== -->
+
+        <section class="about-purpose">
+
+            <div class="purpose-content">
+
+                <p class="section-subtitle">
+                    OUR PURPOSE
+                </p>
+
+                <h2>
+                    Why We Created This Website
+                </h2>
+
+                <p>
+                    Afghanistan has a rich history, diverse cultures,
+                    beautiful landscapes and many fascinating
+                    historical places.
+                </p>
+
+                <p>
+                    This website brings some of these places together
+                    in one easy-to-explore platform.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===== What You Can Discover ===== -->
+
+        <section class="discover-section">
+
+            <p class="section-subtitle">
+                DISCOVER MORE
+            </p>
+
+            <h2>
+                What You Can Explore
+            </h2>
+
+
+            <div class="discover-cards">
+
+
+                <!-- History -->
+
+                <article class="discover-card">
+
+                    <div class="discover-icon">
+                        🏛️
+                    </div>
+
+                    <h3>
+                        History
+                    </h3>
+
+                    <p>
+                        Explore ancient cities, historical
+                        landmarks and Afghanistan's fascinating past.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Culture -->
+
+                <article class="discover-card">
+
+                    <div class="discover-icon">
+                        🎭
+                    </div>
+
+                    <h3>
+                        Culture
+                    </h3>
+
+                    <p>
+                        Learn about traditions, art, food,
+                        music and cultural heritage.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Nature -->
+
+                <article class="discover-card">
+
+                    <div class="discover-icon">
+                        🏔️
+                    </div>
+
+                    <h3>
+                        Nature
+                    </h3>
+
+                    <p>
+                        Discover mountains, valleys, forests,
+                        lakes and beautiful landscapes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Travel Costs ===== -->
+
+        <section class="travel-costs">
+
+            <p class="section-subtitle">PLAN YOUR TRIP</p>
+
+            <h2>Estimated Travel Costs</h2>
+
+            <p class="cost-description">
+                Approximate costs to help you plan your journey in Afghanistan.
+            </p>
+
+            <div class="cost-cards">
+
+                <div class="cost-card">
+                    <div class="cost-icon">🏨</div>
+                    <h3>Accommodation</h3>
+                    <p class="cost-price">$15–30</p>
+                    <span>per night</span>
+                </div>
+
+                <div class="cost-card">
+                    <div class="cost-icon">🍽️</div>
+                    <h3>Local Food</h3>
+                    <p class="cost-price">$2–5</p>
+                    <span>per meal</span>
+                </div>
+
+                <div class="cost-card">
+                    <div class="cost-icon">🚕</div>
+                    <h3>Transport</h3>
+                    <p class="cost-price">$1–5</p>
+                    <span>per trip</span>
+                </div>
+
+                <div class="cost-card">
+                    <div class="cost-icon">🗺️</div>
+                    <h3>Local Guide</h3>
+                    <p class="cost-price">$10–25</p>
+                    <span>per day</span>
+                </div>
+
+            </div>
+
+            <p class="price-note">
+                * Prices are approximate and may vary by city, season, and service.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ===== Footer ===== -->
+<!-- ================= FOOTER ================= -->
+
+<footer class="w-full mt-16">
+
+    <!-- ================= FOOTER HERO ================= -->
+    <div class="relative w-full overflow-hidden rounded-t-[40px]">
+
+        <!-- Background Image -->
+        <img
+            src="imag/BANDAMIR1.jfif"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-[#062F38]/80"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-6 md:px-12 lg:px-20 pt-16 pb-10">
+
+            <!-- ================= TOP CONTENT ================= -->
+            <div class="flex flex-col lg:flex-row
+                        justify-between
+                        items-start lg:items-center
+                        gap-10">
+
+                <!-- Logo + Text -->
+                <div class="max-w-xl">
+
+                    <p class="text-[#A6E3E9]
+                              text-sm font-semibold
+                              uppercase tracking-[5px] mb-4">
+                        Travel Afghanistan
+                    </p>
+
+                    <h2 class="text-6xl md:text-8xl
+                               font-black
+                               tracking-[10px]
+                               text-white
+                               leading-none">
+                        AF TOURISM
+                    </h2>
+
+                    <p class="mt-6 text-white/80
+                              text-sm md:text-base
+                              leading-7 max-w-lg">
+                        Discover breathtaking landscapes, ancient history,
+                        rich culture and unforgettable journeys across Afghanistan.
+                    </p>
+
+                </div>
+
+
+                <!-- ================= QUICK CTA ================= -->
+                <div class="w-full lg:w-auto">
+
+                    <a href="home.html"
+                       class="group inline-flex items-center
+                              justify-between
+                              gap-8
+                              w-full lg:w-auto
+                              px-7 py-5
+                              rounded-2xl
+                              bg-white
+                              text-[#0F4C5C]
+                              font-bold
+                              shadow-2xl
+                              hover:bg-[#A6E3E9]
+                              transition duration-300">
+
+                        <span>
+                            Home
+                        </span>
+
+                        <span class="text-2xl
+                                     group-hover:translate-x-2
+                                     transition duration-300">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= GLASS PANEL ================= -->
+            <div class="mt-16
+                        rounded-[30px]
+                        bg-white/10
+                        backdrop-blur-xl
+                        border border-white/20
+                        p-7 md:p-10">
+
+                <div class="grid grid-cols-1
+                            sm:grid-cols-2
+                            lg:grid-cols-4
+                            gap-10">
+
+
+                    <!-- ================= DESTINATIONS ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Destinations
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Kabul
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Bamyan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Band-e Amir
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Herat
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= SERVICES ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Services
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <p class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Hotel Booking
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Transportation
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Tour Guide
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Travel Planning
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= CONTACT ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Contact
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    📍
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    Kabul, Afghanistan
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    ✉
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    info@safar.com
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    ☎
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    +93 700 000 000
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-3 mt-6">
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#0F4C5C]
+                                      transition">
+                                f
+                            </a>
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#0F4C5C]
+                                      transition">
+                                ▶
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOTTOM ================= -->
+            <div class="mt-10
+                        pt-6
+                        border-t border-white/20
+                        flex flex-col md:flex-row
+                        justify-between
+                        items-center
+                        gap-4">
+
+                <p class="text-xs text-white/50">
+                    © 2026 AF TOURISM — Discover Afghanistan
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

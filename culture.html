@@ -1,0 +1,1784 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Culture | Afghanistan Tourism</title>
+
+    <!-- Tailwind CSS -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      /* ========================================
+           GENERAL
+        ======================================== */
+
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition:
+          background 0.4s ease,
+          color 0.4s ease;
+      }
+
+      /* ========================================
+           NAVBAR
+        ======================================== */
+
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        transition: all 0.4s ease;
+      }
+
+      .dark .glass-nav {
+        background: rgba(15, 23, 42, 0.94);
+      }
+
+      /* ========================================
+           HERO SLIDER
+        ======================================== */
+
+      .hero-slider {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-slide {
+        display: none;
+        position: relative;
+      }
+
+      .hero-slide.active {
+        display: block;
+        animation: fadeSlide 1.8s ease-in-out;
+      }
+
+      @keyframes fadeSlide {
+        from {
+          opacity: 0;
+          transform: scale(1.025);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 680px;
+        object-fit: cover;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.82),
+          rgba(0, 0, 0, 0.32),
+          rgba(0, 0, 0, 0.08)
+        );
+      }
+
+      /* ========================================
+           CULTURAL CARDS
+           Afghanistan Flag Inspired Colors
+        ======================================== */
+
+      .culture-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 22px;
+        border: 3px solid;
+        background: #ffffff;
+
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease,
+          background 0.4s ease;
+      }
+
+      .dark .culture-card {
+        background: #1e293b;
+      }
+
+      .culture-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        z-index: 10;
+      }
+
+      /* Red */
+
+      .card-red {
+        border-color: #b91c1c;
+
+        box-shadow:
+          0 10px 20px rgba(185, 28, 28, 0.14),
+          0 20px 45px rgba(185, 28, 28, 0.16);
+      }
+
+      .card-red::before {
+        background: linear-gradient(to right, #7f1d1d, #ef4444, #991b1b);
+      }
+
+      /* Green */
+
+      .card-green {
+        border-color: #15803d;
+
+        box-shadow:
+          0 10px 20px rgba(21, 128, 61, 0.14),
+          0 20px 45px rgba(21, 128, 61, 0.16);
+      }
+
+      .card-green::before {
+        background: linear-gradient(to right, #14532d, #22c55e, #166534);
+      }
+
+      /* Black */
+
+      .card-black {
+        border-color: #111827;
+
+        box-shadow:
+          0 10px 20px rgba(17, 24, 39, 0.2),
+          0 20px 45px rgba(17, 24, 39, 0.22);
+      }
+
+      .dark .card-black {
+        border-color: #64748b;
+      }
+
+      .card-black::before {
+        background: linear-gradient(to right, #000000, #374151, #111827);
+      }
+
+      /* Hover */
+
+      .culture-card:hover {
+        transform: translateY(-12px);
+      }
+
+      .card-red:hover {
+        box-shadow:
+          0 18px 30px rgba(185, 28, 28, 0.2),
+          0 32px 70px rgba(185, 28, 28, 0.3);
+      }
+
+      .card-green:hover {
+        box-shadow:
+          0 18px 30px rgba(21, 128, 61, 0.2),
+          0 32px 70px rgba(21, 128, 61, 0.3);
+      }
+
+      .card-black:hover {
+        box-shadow:
+          0 18px 30px rgba(0, 0, 0, 0.24),
+          0 32px 70px rgba(0, 0, 0, 0.34);
+      }
+
+      .culture-image-box {
+        height: 230px;
+        overflow: hidden;
+      }
+
+      .culture-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        transition:
+          transform 0.7s ease,
+          filter 0.5s ease;
+      }
+
+      .culture-card:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.06);
+      }
+
+      /* ========================================
+           SECTION TITLES
+        ======================================== */
+
+      .section-title {
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+
+        width: 65%;
+        height: 5px;
+
+        left: 17.5%;
+        bottom: -14px;
+
+        border-radius: 20px;
+
+        background: linear-gradient(
+          to right,
+          #b91c1c 0%,
+          #111827 50%,
+          #15803d 100%
+        );
+      }
+
+      /* ========================================
+           PATTERN
+        ======================================== */
+
+      .custom-pattern {
+        background-image: radial-gradient(
+          rgba(20, 184, 166, 0.1) 1px,
+          transparent 1px
+        );
+
+        background-size: 22px 22px;
+      }
+
+      .dark .custom-pattern {
+        background-image: radial-gradient(
+          rgba(45, 212, 191, 0.08) 1px,
+          transparent 1px
+        );
+      }
+
+      /* ========================================
+           FOOD DROPDOWN
+        ======================================== */
+
+      .food-details {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .food-details:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(15, 118, 110, 0.15);
+      }
+
+      .food-details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .food-details summary {
+        list-style: none;
+      }
+
+      .food-details[open] .food-arrow {
+        transform: rotate(45deg);
+      }
+
+      .food-arrow {
+        transition: transform 0.3s ease;
+      }
+
+      /* ========================================
+           TRADITION BOX
+        ======================================== */
+
+      .tradition-box {
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .tradition-box:hover {
+        transform: translateY(-8px);
+
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+      }
+
+      /* ========================================
+           SOCIAL ICONS
+        ======================================== */
+
+      .social-icon {
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .social-icon:hover {
+        transform: translateY(-9px) rotate(10deg) scale(1.15);
+
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ========================================
+           MOBILE MENU
+        ======================================== */
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.show {
+        display: block;
+        animation: menuDown 0.35s ease;
+      }
+
+      @keyframes menuDown {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ========================================
+           RESPONSIVE
+        ======================================== */
+
+      @media (max-width: 768px) {
+        .hero-image {
+          height: 560px;
+        }
+
+        .culture-card:hover {
+          transform: translateY(-6px);
+        }
+
+        .culture-image-box {
+          height: 220px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-image {
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#fffaf0] text-gray-800 dark:bg-slate-950 dark:text-gray-100">
+    <!-- ========================================
+         NAVBAR
+    ======================================== -->
+
+    <!-- ================= HEADER ================= -->
+   <header class="glass-nav fixed top-0 left-0 right-0 z-50 shadow-md">
+      <nav class="max-w-7xl mx-auto px-5 py-4">
+        <div class="flex items-center justify-between gap-4">
+          <!-- Logo -->
+
+          <a
+            href="index.html"
+            class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight whitespace-nowrap"
+          >
+            <span class="text-red-700 dark:text-red-400"> Af </span>
+
+            <span class="text-green-700 dark:text-green-400"> Tourism </span>
+          </a>
+
+          <!-- Desktop Menu -->
+
+          <div class="hidden lg:flex items-center gap-6">
+            <a
+              href="home.html"
+              class="font-semibold text-gray-700 hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400 transition"
+            >
+              Home
+            </a>
+
+            <a
+              href="about.h"
+              class="font-semibold text-gray-700 hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400 transition"
+            >
+              About
+            </a>
+
+            <a
+              href="culture.html"
+              class="font-semibold text-red-700 dark:text-red-400 border-b-2 border-green-600 pb-1"
+            >
+              Culture
+            </a>
+
+            <a
+              href="gallery.html"
+              class="font-semibold text-gray-700 hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400 transition"
+            >
+              Gallery
+            </a>
+
+            <a
+              href="contact.html"
+              class="font-semibold text-gray-700 hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400 transition"
+            >
+              Contact
+            </a>
+          </div>
+
+          <!-- Buttons -->
+
+          <div class="flex items-center gap-3">
+            <!-- Dark Mode Button -->
+
+            <button
+              id="themeToggle"
+              aria-label="Change Theme"
+              class="w-11 h-11 rounded-full bg-gray-100 hover:bg-amber-100 dark:bg-slate-700 dark:hover:bg-slate-600 flex items-center justify-center text-xl transition shadow"
+            >
+              <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+
+            <button
+              id="menuBtn"
+              aria-label="Open Menu"
+              class="lg:hidden w-11 h-11 rounded-lg bg-green-700 hover:bg-green-800 text-white text-xl transition"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+
+        <div
+          id="mobileMenu"
+          class="mobile-menu lg:hidden mt-5 border-t border-gray-200 dark:border-slate-700"
+        >
+          <div class="flex flex-col gap-2 py-4">
+            <a
+              href="index.html"
+              class="px-4 py-3 rounded-xl text-gray-700 hover:bg-green-50 hover:text-green-700 dark:text-gray-200 dark:hover:bg-slate-800"
+            >
+              Home
+            </a>
+
+            <a
+              href="about.html"
+              class="px-4 py-3 rounded-xl text-gray-700 hover:bg-green-50 hover:text-green-700 dark:text-gray-200 dark:hover:bg-slate-800"
+            >
+              About
+            </a>
+
+            <a
+              href="destinations.html"
+              class="px-4 py-3 rounded-xl text-gray-700 hover:bg-green-50 hover:text-green-700 dark:text-gray-200 dark:hover:bg-slate-800"
+            >
+              Destinations
+            </a>
+
+            <a
+              href="culture.html"
+              class="px-4 py-3 rounded-xl bg-green-50 text-red-700 font-bold dark:bg-slate-800 dark:text-red-400"
+            >
+              Culture
+            </a>
+
+            <a
+              href="gallery.html"
+              class="px-4 py-3 rounded-xl text-gray-700 hover:bg-green-50 hover:text-green-700 dark:text-gray-200 dark:hover:bg-slate-800"
+            >
+              Gallery
+            </a>
+
+            <a
+              href="contact.html"
+              class="px-4 py-3 rounded-xl text-gray-700 hover:bg-green-50 hover:text-green-700 dark:text-gray-200 dark:hover:bg-slate-800"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========================================
+         HERO SLIDER
+    ======================================== -->
+
+    <section class="hero-slider pt-[76px]">
+      <!-- Slide 1 -->
+
+      <div class="hero-slide active">
+        <img
+          src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1800&q=85"
+          alt="Kabul"
+          class="hero-image"
+        />
+
+        <div class="hero-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-6 pb-20 text-white">
+            <span
+              class="inline-block bg-red-700 px-5 py-2 rounded-full font-bold mb-5 shadow-lg"
+            >
+              🇦🇫 Afghanistan Culture
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-5">Kabul</h1>
+
+            <p
+              class="text-lg md:text-2xl max-w-2xl text-gray-100 leading-relaxed"
+            >
+              The capital of Afghanistan, where history, culture, traditional
+              markets and modern life meet together.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+
+      <div class="hero-slide">
+        <img
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85"
+          alt="Bamyan"
+          class="hero-image"
+        />
+
+        <div class="hero-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-6 pb-20 text-white">
+            <span
+              class="inline-block bg-green-700 px-5 py-2 rounded-full font-bold mb-5 shadow-lg"
+            >
+              🇦🇫 Afghanistan Culture
+            </span>
+
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-5">Bamyan</h2>
+
+            <p
+              class="text-lg md:text-2xl max-w-2xl text-gray-100 leading-relaxed"
+            >
+              A land of mountains, valleys and remarkable historical and
+              cultural heritage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+
+      <div class="hero-slide">
+        <img
+          src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85"
+          alt="Herat"
+          class="hero-image"
+        />
+
+        <div class="hero-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-6 pb-20 text-white">
+            <span
+              class="inline-block bg-gray-900 px-5 py-2 rounded-full font-bold mb-5 shadow-lg"
+            >
+              🇦🇫 Afghanistan Culture
+            </span>
+
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-5">Herat</h2>
+
+            <p
+              class="text-lg md:text-2xl max-w-2xl text-gray-100 leading-relaxed"
+            >
+              A historic center of architecture, art, poetry, crafts and
+              centuries of cultural heritage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+
+      <div class="hero-slide">
+        <img
+          src="https://images.unsplash.com/photo-1470214304380-aadaedcfff1b?auto=format&fit=crop&w=1800&q=85"
+          alt="Badakhshan"
+          class="hero-image"
+        />
+
+        <div class="hero-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-6 pb-20 text-white">
+            <span
+              class="inline-block bg-red-700 px-5 py-2 rounded-full font-bold mb-5 shadow-lg"
+            >
+              🇦🇫 Afghanistan Culture
+            </span>
+
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-5">Badakhshan</h2>
+
+            <p
+              class="text-lg md:text-2xl max-w-2xl text-gray-100 leading-relaxed"
+            >
+              Discover mountain landscapes, colorful traditions, local customs
+              and traditional handicrafts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous Button -->
+
+      <button
+        id="prevBtn"
+        aria-label="Previous Slide"
+        class="absolute left-4 md:left-7 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/85 hover:bg-white text-gray-900 text-2xl shadow-xl transition"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- Next Button -->
+
+      <button
+        id="nextBtn"
+        aria-label="Next Slide"
+        class="absolute right-4 md:right-7 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/85 hover:bg-white text-gray-900 text-2xl shadow-xl transition"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots -->
+
+      <div
+        id="dots"
+        class="absolute bottom-7 left-1/2 -translate-x-1/2 flex gap-3"
+      ></div>
+    </section>
+
+    <!-- ========================================
+         INTRODUCTION
+    ======================================== -->
+
+    <section class="custom-pattern py-20 px-6 bg-[#fffaf0] dark:bg-slate-950">
+      <div class="max-w-5xl mx-auto text-center">
+        <span
+          class="text-green-700 dark:text-green-400 font-bold tracking-widest uppercase"
+        >
+          Discover Afghanistan
+        </span>
+
+        <h2
+          class="section-title text-4xl md:text-5xl font-extrabold mt-4 mb-10"
+        >
+          The Culture of Afghanistan
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-300 text-lg leading-9 mt-12">
+          Afghanistan has a rich and diverse cultural heritage. Every region has
+          its own traditions, clothing, food, celebrations, music, handicrafts
+          and customs. Exploring Afghan culture helps visitors discover the
+          history, identity and hospitality of its people.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CULTURAL PLACES
+    ======================================== -->
+
+    <section class="py-20 px-6 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span
+            class="text-red-700 dark:text-red-400 font-bold tracking-widest"
+          >
+            HISTORICAL & CULTURAL
+          </span>
+
+          <h2 class="section-title text-4xl md:text-5xl font-extrabold mt-4">
+            Cultural Places
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+
+          <article class="culture-card card-red">
+            <div class="culture-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80"
+                alt="Shah Do Shamshira"
+              />
+            </div>
+
+            <div class="p-6">
+              <span class="text-red-700 dark:text-red-400 font-bold text-sm">
+                KABUL
+              </span>
+
+              <h3 class="text-2xl font-bold mt-3 mb-3">Shah-Do Shamshira</h3>
+
+              <p class="text-gray-600 dark:text-gray-300 leading-7">
+                One of Kabul's recognizable historical and cultural landmarks.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+
+          <article class="culture-card card-green">
+            <div class="culture-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=80"
+                alt="Herat Citadel"
+              />
+            </div>
+
+            <div class="p-6">
+              <span
+                class="text-green-700 dark:text-green-400 font-bold text-sm"
+              >
+                HERAT
+              </span>
+
+              <h3 class="text-2xl font-bold mt-3 mb-3">Herat Citadel</h3>
+
+              <p class="text-gray-600 dark:text-gray-300 leading-7">
+                A historic monument representing centuries of Afghan history and
+                architecture.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+
+          <article class="culture-card card-black">
+            <div class="culture-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
+                alt="Bamyan Valley"
+              />
+            </div>
+
+            <div class="p-6">
+              <span class="text-gray-700 dark:text-gray-300 font-bold text-sm">
+                BAMYAN
+              </span>
+
+              <h3 class="text-2xl font-bold mt-3 mb-3">Bamyan Valley</h3>
+
+              <p class="text-gray-600 dark:text-gray-300 leading-7">
+                A culturally important valley surrounded by spectacular
+                mountains and history.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+
+          <article class="culture-card card-red">
+            <div class="culture-image-box">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                alt="Panjshir Valley"
+              />
+            </div>
+
+            <div class="p-6">
+              <span class="text-red-700 dark:text-red-400 font-bold text-sm">
+                PANJSHIR
+              </span>
+
+              <h3 class="text-2xl font-bold mt-3 mb-3">Panjshir Valley</h3>
+
+              <p class="text-gray-600 dark:text-gray-300 leading-7">
+                Famous for beautiful mountain landscapes, villages and rich
+                local culture.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TRADITIONAL FOODS
+    ======================================== -->
+
+    <section class="py-20 px-6 bg-green-50 dark:bg-slate-950">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <span
+            class="text-green-700 dark:text-green-400 font-bold tracking-widest"
+          >
+            TASTE OF AFGHANISTAN
+          </span>
+
+          <h2 class="section-title text-4xl md:text-5xl font-extrabold mt-4">
+            Traditional Foods
+          </h2>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Food 1 -->
+
+          <details
+            class="food-details bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border-l-4 border-red-700"
+          >
+            <summary
+              class="cursor-pointer p-6 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-5">
+                <span class="text-4xl">🍚</span>
+
+                <div>
+                  <h3 class="text-xl font-bold">Kabuli Pulao</h3>
+
+                  <p class="text-gray-500 dark:text-gray-400 mt-1">
+                    Afghanistan's famous traditional rice dish
+                  </p>
+                </div>
+              </div>
+
+              <span class="food-arrow text-2xl text-red-700"> + </span>
+            </summary>
+
+            <div
+              class="px-6 pb-6 pt-5 border-t border-gray-200 dark:border-slate-700 text-gray-600 dark:text-gray-300 leading-8"
+            >
+              Kabuli Pulao is one of the best-known Afghan dishes. It is
+              commonly prepared with rice and may include carrots, raisins, nuts
+              and meat.
+            </div>
+          </details>
+
+          <!-- Food 2 -->
+
+          <details
+            class="food-details bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border-l-4 border-green-700"
+          >
+            <summary
+              class="cursor-pointer p-6 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-5">
+                <span class="text-4xl">🥟</span>
+
+                <div>
+                  <h3 class="text-xl font-bold">Mantu</h3>
+
+                  <p class="text-gray-500 dark:text-gray-400 mt-1">
+                    Traditional Afghan dumplings
+                  </p>
+                </div>
+              </div>
+
+              <span class="food-arrow text-2xl text-green-700"> + </span>
+            </summary>
+
+            <div
+              class="px-6 pb-6 pt-5 border-t border-gray-200 dark:border-slate-700 text-gray-600 dark:text-gray-300 leading-8"
+            >
+              Mantu are steamed dumplings traditionally prepared with a filling
+              and served with yogurt and sauce.
+            </div>
+          </details>
+
+          <!-- Food 3 -->
+
+          <details
+            class="food-details bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border-l-4 border-black dark:border-gray-400"
+          >
+            <summary
+              class="cursor-pointer p-6 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-5">
+                <span class="text-4xl">🫓</span>
+
+                <div>
+                  <h3 class="text-xl font-bold">Bolani</h3>
+
+                  <p class="text-gray-500 dark:text-gray-400 mt-1">
+                    Popular Afghan stuffed flatbread
+                  </p>
+                </div>
+              </div>
+
+              <span
+                class="food-arrow text-2xl text-gray-900 dark:text-gray-200"
+              >
+                +
+              </span>
+            </summary>
+
+            <div
+              class="px-6 pb-6 pt-5 border-t border-gray-200 dark:border-slate-700 text-gray-600 dark:text-gray-300 leading-8"
+            >
+              Bolani is a thin stuffed flatbread commonly filled with potatoes,
+              herbs or other vegetables.
+            </div>
+          </details>
+
+          <!-- Food 4 -->
+
+          <details
+            class="food-details bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border-l-4 border-red-700"
+          >
+            <summary
+              class="cursor-pointer p-6 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-5">
+                <span class="text-4xl">🍜</span>
+
+                <div>
+                  <h3 class="text-xl font-bold">Ashak</h3>
+
+                  <p class="text-gray-500 dark:text-gray-400 mt-1">
+                    Traditional dumplings with herbs
+                  </p>
+                </div>
+              </div>
+
+              <span class="food-arrow text-2xl text-red-700"> + </span>
+            </summary>
+
+            <div
+              class="px-6 pb-6 pt-5 border-t border-gray-200 dark:border-slate-700 text-gray-600 dark:text-gray-300 leading-8"
+            >
+              Ashak are traditional Afghan dumplings commonly filled with herbs
+              and served with yogurt.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TRADITIONAL WEDDINGS
+    ======================================== -->
+
+    <section class="py-20 px-6 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span
+              class="text-red-700 dark:text-red-400 font-bold tracking-widest"
+            >
+              AFGHAN CELEBRATIONS
+            </span>
+
+            <h2
+              class="section-title text-4xl md:text-5xl font-extrabold mt-4 mb-12"
+            >
+              Traditional Weddings
+            </h2>
+
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-9 mb-8">
+              Afghan weddings are important family and social celebrations.
+              Customs may differ from one region to another, while hospitality,
+              family gatherings, traditional clothing, music and food remain
+              important parts of many celebrations.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div
+                class="tradition-box bg-red-50 dark:bg-slate-800 border border-red-200 dark:border-red-900 rounded-2xl p-6"
+              >
+                <div class="text-4xl mb-4">👰</div>
+
+                <h3 class="font-bold text-xl mb-3">Traditional Dress</h3>
+
+                <p class="text-gray-600 dark:text-gray-300">
+                  Colorful and traditional clothing is an important part of
+                  celebrations.
+                </p>
+              </div>
+
+              <div
+                class="tradition-box bg-green-50 dark:bg-slate-800 border border-green-200 dark:border-green-900 rounded-2xl p-6"
+              >
+                <div class="text-4xl mb-4">🎶</div>
+
+                <h3 class="font-bold text-xl mb-3">Music</h3>
+
+                <p class="text-gray-600 dark:text-gray-300">
+                  Music and traditional performances add joy to special
+                  celebrations.
+                </p>
+              </div>
+
+              <div
+                class="tradition-box bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-2xl p-6"
+              >
+                <div class="text-4xl mb-4">🍽️</div>
+
+                <h3 class="font-bold text-xl mb-3">Family Feast</h3>
+
+                <p class="text-gray-600 dark:text-gray-300">
+                  Guests are welcomed with food, kindness and Afghan
+                  hospitality.
+                </p>
+              </div>
+
+              <div
+                class="tradition-box bg-red-50 dark:bg-slate-800 border border-red-200 dark:border-red-900 rounded-2xl p-6"
+              >
+                <div class="text-4xl mb-4">🌸</div>
+
+                <h3 class="font-bold text-xl mb-3">Celebration</h3>
+
+                <p class="text-gray-600 dark:text-gray-300">
+                  Families and communities celebrate together according to local
+                  customs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-3xl overflow-hidden shadow-2xl border-4 border-green-700"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85"
+              alt="Traditional Wedding"
+              class="w-full h-[550px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CUSTOMS AND TRADITIONS
+    ======================================== -->
+
+    <section class="py-20 px-6 bg-red-50 dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span
+            class="text-red-700 dark:text-red-400 font-bold tracking-widest"
+          >
+            LOCAL HERITAGE
+          </span>
+
+          <h2 class="section-title text-4xl md:text-5xl font-extrabold mt-4">
+            Customs & Traditions
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-red-700 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">🤝</div>
+
+            <h3 class="text-2xl font-bold mb-4">Hospitality</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Welcoming guests and showing respect to visitors are important
+              values in Afghan communities.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-green-700 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">🍵</div>
+
+            <h3 class="text-2xl font-bold mb-4">Tea Culture</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Tea is commonly shared with family, friends and guests during
+              social gatherings.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-black dark:border-gray-400 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">👨‍👩‍👧‍👦</div>
+
+            <h3 class="text-2xl font-bold mb-4">Family</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Family relationships and gatherings have an important place in
+              Afghan social life.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-red-700 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">🎉</div>
+
+            <h3 class="text-2xl font-bold mb-4">Festivals</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Seasonal and cultural celebrations bring people and communities
+              together.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-green-700 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">🧵</div>
+
+            <h3 class="text-2xl font-bold mb-4">Handicrafts</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Carpets, embroidery, pottery and handmade products reflect
+              regional skills and traditions.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-white dark:bg-slate-800 border-t-4 border-black dark:border-gray-400 rounded-2xl p-8 shadow-xl"
+          >
+            <div class="text-5xl mb-5">🎨</div>
+
+            <h3 class="text-2xl font-bold mb-4">Traditional Arts</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Poetry, calligraphy, music and art remain important forms of
+              Afghan cultural expression.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CLOTHING AND HANDICRAFTS
+    ======================================== -->
+
+    <section class="py-20 px-6 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span
+            class="text-green-700 dark:text-green-400 font-bold tracking-widest"
+          >
+            AFGHAN HERITAGE
+          </span>
+
+          <h2 class="section-title text-4xl md:text-5xl font-extrabold mt-4">
+            Clothing & Handicrafts
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="tradition-box bg-red-50 dark:bg-slate-800 border-l-4 border-red-700 rounded-3xl p-10 shadow-xl"
+          >
+            <div class="text-6xl mb-6">👗</div>
+
+            <h3 class="text-3xl font-extrabold mb-5">Traditional Clothing</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Traditional Afghan clothing differs from region to region and
+              often includes colorful fabrics, embroidery and distinctive local
+              designs.
+            </p>
+          </div>
+
+          <div
+            class="tradition-box bg-green-50 dark:bg-slate-800 border-l-4 border-green-700 rounded-3xl p-10 shadow-xl"
+          >
+            <div class="text-6xl mb-6">🧶</div>
+
+            <h3 class="text-3xl font-extrabold mb-5">Afghan Handicrafts</h3>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-8">
+              Carpets, embroidery, jewelry, pottery and other handmade products
+              demonstrate Afghanistan's rich artistic and cultural heritage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         EXPLORE CULTURE DROPDOWN
+    ======================================== -->
+
+    <section
+      class="py-20 px-6 bg-gradient-to-br from-red-800 via-gray-900 to-green-800 text-white"
+    >
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-amber-300 font-bold tracking-widest">
+            EXPLORE MORE
+          </span>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold mt-4">
+            Explore Afghan Culture
+          </h2>
+        </div>
+
+        <div class="space-y-5">
+          <details
+            class="bg-white/10 border border-red-400/40 rounded-2xl backdrop-blur-sm"
+          >
+            <summary
+              class="cursor-pointer p-6 font-bold text-lg flex justify-between items-center"
+            >
+              <span>🏛 Cultural Places</span>
+              <span>+</span>
+            </summary>
+
+            <div class="px-6 pb-6 text-gray-200 leading-8">
+              Explore historic mosques, citadels, valleys, monuments and
+              important cultural landmarks.
+            </div>
+          </details>
+
+          <details
+            class="bg-white/10 border border-green-400/40 rounded-2xl backdrop-blur-sm"
+          >
+            <summary
+              class="cursor-pointer p-6 font-bold text-lg flex justify-between items-center"
+            >
+              <span>🍛 Traditional Foods</span>
+              <span>+</span>
+            </summary>
+
+            <div class="px-6 pb-6 text-gray-200 leading-8">
+              Discover Kabuli Pulao, Mantu, Ashak, Bolani and other traditional
+              Afghan dishes.
+            </div>
+          </details>
+
+          <details
+            class="bg-white/10 border border-gray-300/50 rounded-2xl backdrop-blur-sm"
+          >
+            <summary
+              class="cursor-pointer p-6 font-bold text-lg flex justify-between items-center"
+            >
+              <span>💍 Traditional Weddings</span>
+              <span>+</span>
+            </summary>
+
+            <div class="px-6 pb-6 text-gray-200 leading-8">
+              Learn about different regional celebrations, traditional clothing,
+              hospitality and family customs.
+            </div>
+          </details>
+
+          <details
+            class="bg-white/10 border border-green-400/40 rounded-2xl backdrop-blur-sm"
+          >
+            <summary
+              class="cursor-pointer p-6 font-bold text-lg flex justify-between items-center"
+            >
+              <span>🎭 Customs & Traditions</span>
+              <span>+</span>
+            </summary>
+
+            <div class="px-6 pb-6 text-gray-200 leading-8">
+              Discover local hospitality, family traditions, handicrafts, tea
+              culture and traditional arts.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer class="w-full mt-16">
+
+    <!-- ================= FOOTER HERO ================= -->
+    <div class="relative w-full overflow-hidden rounded-t-[40px]">
+
+        <!-- Background Image -->
+        <img
+            src="imag/BANDAMIR1.jfif"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-[#1F2924]/80"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-6 md:px-12 lg:px-20 pt-16 pb-10">
+
+            <!-- ================= TOP CONTENT ================= -->
+            <div class="flex flex-col lg:flex-row
+                        justify-between
+                        items-start lg:items-center
+                        gap-10">
+
+                <!-- Logo + Text -->
+                <div class="max-w-xl">
+
+                    <p class="text-[#C8A45D]
+                              text-sm font-semibold
+                              uppercase tracking-[5px] mb-4">
+                        Travel Afghanistan
+                    </p>
+
+                    <h2 class="text-6xl md:text-8xl
+                               font-black
+                               tracking-[10px]
+                               text-white
+                               leading-none">
+                        AF TOURISM
+                    </h2>
+
+                    <p class="mt-6 text-white/80
+                              text-sm md:text-base
+                              leading-7 max-w-lg">
+                        Discover breathtaking landscapes, ancient history,
+                        rich culture and unforgettable journeys across
+                        Afghanistan.
+                    </p>
+
+                </div>
+
+
+                <!-- ================= QUICK CTA ================= -->
+                <div class="w-full lg:w-auto">
+
+                    <a href="#"
+                       class="group inline-flex items-center
+                              justify-between
+                              gap-8
+                              w-full lg:w-auto
+                              px-7 py-5
+                              rounded-2xl
+                              bg-white
+                              text-[#245C45]
+                              font-bold
+                              shadow-2xl
+                              hover:bg-[#C8A45D]
+                              transition duration-300">
+
+                        <span>
+                            Home
+                        </span>
+
+                        <span class="text-2xl
+                                     group-hover:translate-x-2
+                                     transition duration-300">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= GLASS PANEL ================= -->
+            <div class="mt-16
+                        rounded-[30px]
+                        bg-white/10
+                        backdrop-blur-xl
+                        border border-white/20
+                        p-7 md:p-10">
+
+                <div class="grid grid-cols-1
+                            sm:grid-cols-2
+                            lg:grid-cols-4
+                            gap-10">
+
+
+                   
+
+
+                    <!-- ================= DESTINATIONS ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Destinations
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Kabul
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Bamyan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Band-e Amir
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Herat
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= SERVICES ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Services
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Hotel Booking
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Transportation
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Tour Guide
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Travel Planning
+                            </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= CONTACT ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Contact
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#C8A45D]">
+                                    📍
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    Kabul, Afghanistan
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#C8A45D]">
+                                    ✉
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    info@safar.com
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#C8A45D]">
+                                    ☎
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    +93 700 000 000
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-3 mt-6">
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#245C45]
+                                      transition">
+                                f
+                            </a>
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#245C45]
+                                      transition">
+                                ▶
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOTTOM ================= -->
+            <div class="mt-10
+                        pt-6
+                        border-t border-white/20
+                        flex flex-col md:flex-row
+                        justify-between
+                        items-center
+                        gap-4">
+
+                <p class="text-xs text-white/50">
+                    © 2026 AF TOURISM — Discover Afghanistan
+                </p>
+
+                
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+
+    <script>
+      /* ========================================
+           SLIDER
+        ======================================== */
+
+      const slides = document.querySelectorAll(".hero-slide");
+      const dotsContainer = document.getElementById("dots");
+
+      let currentSlide = 0;
+      let slideTimer;
+
+      // Create slider dots
+
+      slides.forEach((slide, index) => {
+        const dot = document.createElement("button");
+
+        dot.className =
+          "w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300";
+
+        dot.setAttribute("aria-label", "Go to slide " + (index + 1));
+
+        dot.addEventListener("click", () => {
+          showSlide(index);
+          resetTimer();
+        });
+
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = dotsContainer.querySelectorAll("button");
+
+      function showSlide(index) {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        dots.forEach((dot) => {
+          dot.classList.remove("bg-red-500", "scale-125");
+
+          dot.classList.add("bg-white/60");
+        });
+
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add("active");
+
+        dots[currentSlide].classList.remove("bg-white/60");
+
+        dots[currentSlide].classList.add("bg-red-500", "scale-125");
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      function previousSlide() {
+        showSlide(currentSlide - 1);
+      }
+
+      // Slider changes every 8 seconds
+
+      function startTimer() {
+        slideTimer = setInterval(nextSlide, 8000);
+      }
+
+      function resetTimer() {
+        clearInterval(slideTimer);
+
+        startTimer();
+      }
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        nextSlide();
+        resetTimer();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        previousSlide();
+        resetTimer();
+      });
+
+      showSlide(0);
+
+      startTimer();
+
+      /* ========================================
+           MOBILE MENU
+        ======================================== */
+
+      const menuBtn = document.getElementById("menuBtn");
+
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+      });
+
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("show");
+        });
+      });
+
+      /* ========================================
+           DARK / LIGHT MODE
+        ======================================== */
+
+      const themeToggle = document.getElementById("themeToggle");
+
+      const themeIcon = document.getElementById("themeIcon");
+
+      function updateThemeIcon() {
+        if (document.documentElement.classList.contains("dark")) {
+          themeIcon.className = "fa-solid fa-sun";
+        } else {
+          themeIcon.className = "fa-solid fa-moon";
+        }
+      }
+
+      // Load saved theme
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.remove("dark");
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+
+      updateThemeIcon();
+
+      // Change theme
+
+      themeToggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+
+        updateThemeIcon();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1845 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes journey {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(700%);
+            }
+        }
+
+        .animate-journey {
+            animation: journey 5s linear infinite;
+        }
+    </style>
+</head>
+
+
+<body class="min-h-screen text-[#66716B] overflow-x-hidden"
+    style="background: linear-gradient(135deg, #F5FAF7, #EAF5EF, #C8A45D);">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="relative z-50 w-full max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pt-3">
+
+        <div class="relative
+                    bg-white/70
+                    backdrop-blur-2xl
+                    border border-white/60
+                    shadow-xl shadow-[#66716B]/30
+                    rounded-2xl
+                    px-3 sm:px-5 md:px-7
+                    py-3">
+
+            <!-- Decorative Glow -->
+
+            <div class="absolute -top-10 -right-10
+                        w-32 h-32
+                        bg-[#2F7D5B]/20
+                        rounded-full
+                        blur-3xl
+                        pointer-events-none">
+            </div>
+
+
+            <!-- Header Content -->
+
+            <div class="relative flex items-center justify-between gap-3 md:gap-6">
+
+
+                <!-- ================= LOGO ================= -->
+
+                <a href="#" class="flex items-center gap-2 sm:gap-3 shrink-0">
+
+                    <div class="w-9 h-9 sm:w-11 sm:h-11
+                                rounded-xl
+                                bg-[#2F7D5B]
+                                flex items-center justify-center
+                                shadow-md shadow-[#2F7D5B]/30">
+
+                        <span class="text-white text-base sm:text-xl font-black">
+                            AF
+                        </span>
+
+                    </div>
+
+
+                    <div class="leading-none">
+
+                        <h1 class="text-lg sm:text-2xl md:text-3xl
+                                   font-black
+                                   tracking-[0.12em] sm:tracking-[0.18em]
+                                   text-[#1F2924]">
+                            TOURISM
+                        </h1>
+
+                        <p class="text-[7px] sm:text-[9px]
+                                  tracking-[0.2em] sm:tracking-[0.3em]
+                                  text-[#66716B]
+                                  mt-1">
+                            AFGHANISTAN
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ================= NAVIGATION ================= -->
+
+                <nav class="hidden lg:flex items-center gap-1">
+
+                    <a href="home.html"
+                        class="px-3 xl:px-4 py-2 rounded-xl text-sm font-semibold text-[#66716B] hover:bg-[#EAF5EF] hover:text-slate-900 transition-all duration-300">
+                        Home
+                    </a>
+
+                    <a href="Tours.html"
+                        class="px-3 xl:px-4 py-2 rounded-xl text-sm font-semibold text-[#66716B] hover:bg-[#EAF5EF] hover:text-slate-900 transition-all duration-300">
+                        Tours
+                    </a>
+
+                    <a href="gallery.html"
+                        class="px-3 xl:px-4 py-2 rounded-xl text-sm font-semibold text-[#66716B] hover:bg-[#EAF5EF] hover:text-slate-900 transition-all duration-300">
+                        Gallery
+                    </a>
+
+                    <a href="culture.html"
+                        class="px-3 xl:px-4 py-2 rounded-xl text-sm font-semibold text-[#66716B] hover:bg-[#EAF5EF] hover:text-slate-900 transition-all duration-300">
+                        Culture
+                    </a>
+
+                    <a href="#about"
+                        class="px-3 xl:px-4 py-2 rounded-xl text-sm font-semibold text-[#66716B] hover:bg-[#EAF5EF] hover:text-slate-900 transition-all duration-300">
+                        About
+                    </a>
+
+                </nav>
+
+
+                <!-- ================= RIGHT SIDE ================= -->
+
+                <div class="flex items-center gap-2">
+
+                    <button class="hidden sm:flex items-center gap-2
+                                   px-2 sm:px-3 py-2
+                                   rounded-xl
+                                   border border-[#C8A45D]
+                                   bg-[#F5FAF7]/70
+                                   text-xs sm:text-sm font-semibold
+                                   text-[#66716B]
+                                   hover:bg-[#EAF5EF]
+                                   transition-all duration-300">
+
+                        <span>🌐</span>
+                        <span>EN</span>
+
+                    </button>
+
+
+                    <button class="lg:hidden
+                                   w-9 h-9 sm:w-10 sm:h-10
+                                   rounded-xl
+                                   bg-[#EAF5EF]
+                                   border border-[#C8A45D]
+                                   flex items-center
+                                   justify-center
+                                   text-[#66716B]
+                                   text-lg sm:text-xl">
+
+                        ☰
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERAT HEADER ================= -->
+
+    <section class="w-full max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 mt-4 md:mt-6">
+
+        <div class="flex flex-col sm:flex-row
+                    items-center sm:items-center
+                    justify-between
+                    gap-5 sm:gap-8
+                    bg-[#EAF5EF]/80
+                    backdrop-blur-md
+                    border border-[#C8A45D]
+                    shadow-xl
+                    rounded-2xl
+                    p-4 sm:p-6 md:p-8">
+
+
+            <div class="flex flex-col text-center sm:text-left">
+
+                <p class="text-[10px] sm:text-xs
+                          uppercase
+                          tracking-[0.2em] sm:tracking-[0.3em]
+                          text-[#245C45]
+                          font-semibold
+                          mb-2">
+                    Explore Afghanistan
+                </p>
+
+                <h4 class="text-xl sm:text-2xl md:text-3xl
+                           font-bold
+                           tracking-[0.1em] sm:tracking-[0.15em]
+                           text-[#1F2924]">
+                    H_E_R_A_T
+                </h4>
+
+            </div>
+
+
+            <div class="shrink-0">
+
+                <img
+                    class="w-[100px] h-[100px]
+                           sm:w-[150px] sm:h-[120px]
+                           md:w-[200px] md:h-[150px]
+                           lg:w-[250px] lg:h-[170px]
+                           rounded-xl
+                           object-cover
+                           transition-all
+                           duration-700
+                           ease-in-out
+                           hover:scale-105
+                           hover:-translate-y-1
+                           shadow-md"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTaNkX3cyBAHAZkeqqHibtLYVb8g2sPWbM2ryOr0rwA&s=10"
+                    alt="Herat">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="w-full max-w-[1600px] mx-auto
+                 grid grid-cols-1 lg:grid-cols-3
+                 gap-4 md:gap-6
+                 p-3 sm:p-4 md:p-6 lg:p-8">
+
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <aside class="lg:col-span-1
+                      rounded-2xl
+                      bg-[#F5FAF7]/90
+                      backdrop-blur-xl
+                      border border-[#C8A45D]
+                      shadow-lg
+                      p-4 sm:p-6
+                      h-fit">
+
+
+            <!-- Travel Equipment -->
+
+            <h2 class="text-xl sm:text-2xl font-bold text-[#1F2924] mb-4">
+                Travel Equipment
+            </h2>
+
+            <div class="overflow-x-auto rounded-xl border border-[#C8A45D] mb-8">
+
+                <table class="w-full min-w-[320px] text-sm text-left text-[#66716B]">
+
+                    <thead class="bg-[#C8A45D] text-[#1F2924]">
+
+                        <tr>
+                            <th class="px-3 py-3">Equipment</th>
+                            <th class="px-3 py-3">Need</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Backpack</td>
+                            <td class="px-3 py-3 text-[#245C45]">✓</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Water Bottle</td>
+                            <td class="px-3 py-3 text-[#245C45]">✓</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">First Aid Kit</td>
+                            <td class="px-3 py-3 text-[#245C45]">✓</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Warm Clothes</td>
+                            <td class="px-3 py-3 text-[#245C45]">✓</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Weather -->
+
+            <h2 class="text-xl sm:text-2xl font-bold text-[#1F2924] mb-4">
+                Weather
+            </h2>
+
+            <div class="overflow-x-auto rounded-xl border border-[#C8A45D] mb-8">
+
+                <table class="w-full min-w-[320px] text-sm text-left text-[#66716B]">
+
+                    <thead class="bg-[#EAF5EF] text-[#1F2924]">
+
+                        <tr>
+                            <th class="px-3 py-3">Season</th>
+                            <th class="px-3 py-3">Weather</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Spring</td>
+                            <td class="px-3 py-3">Cool</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Summer</td>
+                            <td class="px-3 py-3">Warm</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Autumn</td>
+                            <td class="px-3 py-3">Cold</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Winter</td>
+                            <td class="px-3 py-3">Very Cold</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Travel Costs -->
+
+            <h2 class="text-xl sm:text-2xl font-bold text-[#1F2924] mb-4">
+                Travel Costs
+            </h2>
+
+            <div class="overflow-x-auto rounded-xl border border-[#C8A45D] mb-8">
+
+                <table class="w-full min-w-[320px] text-sm text-left text-[#66716B]">
+
+                    <thead class="bg-[#C8A45D] text-[#1F2924]">
+
+                        <tr>
+                            <th class="px-3 py-3">Service</th>
+                            <th class="px-3 py-3">Price</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Hotel</td>
+                            <td class="px-3 py-3">$20+</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Room</td>
+                            <td class="px-3 py-3">$15+</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Food</td>
+                            <td class="px-3 py-3">$5+</td>
+                        </tr>
+
+                        <tr class="border-t border-[#EAF5EF]">
+                            <td class="px-3 py-3">Transport</td>
+                            <td class="px-3 py-3">$10+</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Food -->
+
+            <div class="mb-8">
+
+                <h2 class="text-xl font-bold text-[#1F2924] mb-4">
+                    🍽️ Food
+                </h2>
+
+                <div class="space-y-3 text-[#66716B]">
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Local Food</span>
+                        <span class="text-[#245C45]">Available</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Restaurant</span>
+                        <span class="text-[#245C45]">Available</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3">
+                        <span>Tea & Snacks</span>
+                        <span class="text-[#245C45]">Available</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Travel Costs -->
+
+            <div class="mb-8">
+
+                <h2 class="text-xl font-bold text-[#1F2924] mb-4">
+                    💰 Travel Costs
+                </h2>
+
+                <div class="space-y-3 text-[#66716B]">
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Hotel</span>
+                        <span class="text-[#245C45]">$20+</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Food</span>
+                        <span class="text-[#245C45]">$5+</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3">
+                        <span>Transport</span>
+                        <span class="text-[#245C45]">$10+</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Transportation -->
+
+            <div class="mb-8">
+
+                <h2 class="text-xl font-bold text-[#1F2924] mb-4">
+                    🚗 Transportation
+                </h2>
+
+                <div class="space-y-3 text-[#66716B]">
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Private Car</span>
+                        <span class="text-[#245C45]">✓</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3 border-b border-[#EAF5EF] pb-2">
+                        <span>Taxi</span>
+                        <span class="text-[#245C45]">✓</span>
+                    </div>
+
+                    <div class="flex justify-between gap-3">
+                        <span>Bus</span>
+                        <span class="text-[#245C45]">✓</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Back Home -->
+
+            <div class="space-y-3">
+
+                <a href="Tours.html"
+                    class="block w-full text-center bg-[#2F7D5B] hover:bg-[#C8A45D] text-[#1F2924] font-semibold py-3 px-4 rounded-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
+
+                    ← Province page
+
+                </a>
+
+                <a href="home.html"
+                    class="block w-full text-center bg-[#2F7D5B] hover:bg-[#C8A45D] text-[#1F2924] font-semibold py-3 px-4 rounded-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
+
+                    ← Back to Home
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <div class="lg:col-span-2 flex flex-col gap-4">
+
+
+            <!-- LARGE BOX -->
+
+            <section class="rounded-2xl
+                            bg-[#F5FAF7]/90
+                            backdrop-blur-xl
+                            border border-[#C8A45D]
+                            shadow-lg
+                            p-4 sm:p-6 md:p-8">
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#1F2924] mb-4">
+                    Qala-e Ikhtiyaruddin
+                </h2>
+
+
+                <div class="border-l-4 border-[#2F7D5B] pl-3 sm:pl-5">
+
+                    <p class="text-[#66716B]
+                              text-sm sm:text-base md:text-lg
+                              leading-7 md:leading-8
+                              text-justify">
+
+                        Qala-e Ikhtiyaruddin is more than an ancient fortress; it is a symbol of the long and complex
+                        history of Herat. For centuries, the citadel witnessed the rise and fall of rulers, periods of
+                        war and peace, and the development of Herat as one of the major cultural centers of the region.
+
+                        Its massive walls and towers preserve evidence of different architectural periods, while its
+                        connection with the Kart and Timurid rulers gives it a special place in the history of
+                        Afghanistan. During the Timurid period, when Herat became an important center of art,
+                        literature, architecture, and scholarship, the citadel was closely connected with the political
+                        life of the city.<br><br>
+
+                        Although the fortress experienced destruction, neglect, and periods of conflict, restoration and
+                        conservation efforts have helped preserve important parts of the monument. Today, Qala-e
+                        Ikhtiyaruddin continues to represent Herat's historical identity and provides an opportunity for
+                        visitors to connect with the city's ancient and medieval past.<br><br>
+
+                        For tourists visiting Afghanistan, the citadel offers an experience that combines history,
+                        architecture, archaeology, culture, and beautiful views of Herat. Together with the city's
+                        mosques, minarets, historic markets, and other monuments, Qala-e Ikhtiyaruddin helps demonstrate
+                        why Herat has remained an important cultural city for centuries.<br><br>
+
+                        The preservation of the citadel is therefore important for Afghanistan and for the wider
+                        understanding of the history of Central and South Asia. By protecting monuments such as Qala-e
+                        Ikhtiyaruddin, future generations will be able to learn about the civilizations, rulers,
+                        artists, architects, and communities that helped shape the remarkable history of Herat.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ================= IMAGES ================= -->
+
+                <div class="max-w-5xl mx-auto mt-8
+                            grid grid-cols-1 sm:grid-cols-2
+                            gap-4 md:gap-8
+                            px-0 sm:px-4">
+
+                    <div class="group overflow-hidden rounded-2xl md:rounded-3xl shadow-lg">
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_23qG_oPClOC0qu02Xmo0bTo2HMm_Pf98K0vymMbRg&s=10"
+                            alt="Buddhas"
+                            class="w-full h-[220px] sm:h-[250px] md:h-[320px]
+                                   object-contain bg-white
+                                   transition duration-700 ease-in-out
+                                   group-hover:scale-105
+                                   group-hover:rotate-1">
+
+                    </div>
+
+
+                    <div class="group overflow-hidden rounded-2xl md:rounded-3xl shadow-lg">
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJQ_YrVxY_3VkhYnVB1DK_LkUpllSLySI-LixG5DTRM_f9BKFcFaXrz7w&s=10"
+                            alt="Buddhas"
+                            class="w-full h-[220px] sm:h-[250px] md:h-[320px]
+                                   object-contain bg-white
+                                   transition duration-700 ease-in-out
+                                   group-hover:scale-105
+                                   group-hover:rotate-1">
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= TRAVEL SERVICES ================= -->
+
+                <section class="rounded-2xl
+                                bg-[#EAF5EF]/80
+                                backdrop-blur-xl
+                                border border-[#C8A45D]
+                                shadow-lg
+                                p-4 sm:p-5 md:p-6
+                                mt-8">
+
+                    <h3 class="text-xl sm:text-2xl font-bold text-[#1F2924] px-1 sm:px-3 mb-4">
+                        Travel Services
+                    </h3>
+
+
+                    <p class="text-[#66716B]
+                              text-sm
+                              px-1 sm:px-3
+                              mb-7
+                              leading-6
+                              text-justify">
+
+                        We offer a variety of travel services designed to make your journey
+                        across Afghanistan easier, safer, and more enjoyable. Whether you need
+                        comfortable accommodation, reliable transportation, a local guide,
+                        delicious food, photography, or help planning your trip, SAFAR is here
+                        to support you. Our goal is to help every traveler discover the beauty,
+                        culture, history, and natural wonders of Afghanistan with confidence
+                        and comfort.
+
+                    </p>
+
+
+                    <!-- Services Grid -->
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+
+                        <!-- Hotel -->
+
+                        <div class="group bg-[#F5FAF7]
+                                    border border-[#C8A45D]
+                                    rounded-xl
+                                    p-4
+                                    transition-all
+                                    duration-500
+                                    hover:bg-[#C8A45D]
+                                    hover:-translate-y-2
+                                    hover:shadow-xl">
+
+                            <div class="text-3xl mb-2">🏨</div>
+
+                            <h4 class="text-[#1F2924] font-semibold">
+                                Hotel Booking
+                            </h4>
+
+                            <p class="text-[#66716B] text-xs mt-2 leading-5">
+                                Find comfortable hotels and rooms
+                                for your trip.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Transportation -->
+
+                        <div class="group bg-[#F5FAF7]
+                                    border border-[#C8A45D]
+                                    rounded-xl
+                                    p-4
+                                    transition-all
+                                    duration-500
+                                    hover:bg-[#C8A45D]
+                                    hover:-translate-y-2
+                                    hover:shadow-xl">
+
+                            <div class="text-3xl mb-2">🚗</div>
+
+                            <h4 class="text-[#1F2924] font-semibold">
+                                Transportation
+                            </h4>
+
+                            <p class="text-[#66716B] text-xs mt-2 leading-5">
+                                Arrange transportation for
+                                comfortable travel.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Tour Guide -->
+
+                        <div class="group bg-[#F5FAF7]
+                                    border border-[#C8A45D]
+                                    rounded-xl
+                                    p-4
+                                    transition-all
+                                    duration-500
+                                    hover:bg-[#C8A45D]
+                                    hover:-translate-y-2
+                                    hover:shadow-xl">
+
+                            <div class="text-3xl mb-2">🧭</div>
+
+                            <h4 class="text-[#1F2924] font-semibold">
+                                Tour Guide
+                            </h4>
+
+                            <p class="text-[#66716B] text-xs mt-2 leading-5">
+                                Local guides help you explore
+                                beautiful destinations.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Travel Planning -->
+
+                        <div class="group bg-[#F5FAF7]
+                                    border border-[#C8A45D]
+                                    rounded-xl
+                                    p-4
+                                    transition-all
+                                    duration-500
+                                    hover:bg-[#C8A45D]
+                                    hover:-translate-y-2
+                                    hover:shadow-xl">
+
+                            <div class="text-3xl mb-2">🗺️</div>
+
+                            <h4 class="text-[#1F2924] font-semibold">
+                                Travel Planning
+                            </h4>
+
+                            <p class="text-[#66716B] text-xs mt-2 leading-5">
+                                Plan your trip with routes,
+                                places, and useful information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- More Services -->
+
+                    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8">
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            🍽️ Food
+                        </span>
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            📸 Photography
+                        </span>
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            ⛺ Camping
+                        </span>
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            🧭 Local Guide
+                        </span>
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            🛡️ Travel Insurance
+                        </span>
+
+                        <span class="text-xs text-[#66716B] bg-[#F5FAF7] border border-[#C8A45D] px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#C8A45D] hover:-translate-y-1">
+                            ✈️ Airport Pickup
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOD SECTION ================= -->
+
+    <div class="w-full max-w-[1600px] mx-auto mt-10 md:mt-14 px-3 sm:px-4 md:px-6 lg:px-8">
+
+        <h3 class="text-xl sm:text-2xl font-bold text-[#1F2924] text-center mb-6 md:mb-8">
+            Afghan Traditional Foods
+        </h3>
+
+
+        <div class="relative
+                    bg-[#F5FAF7]/90
+                    backdrop-blur-xl
+                    border border-[#C8A45D]
+                    rounded-2xl md:rounded-3xl
+                    p-4 sm:p-6 md:p-8
+                    overflow-hidden">
+
+
+            <div class="absolute -top-20 -right-20
+                        w-56 h-56
+                        bg-[#2F7D5B]/20
+                        rounded-full blur-3xl">
+            </div>
+
+            <div class="absolute -bottom-20 -left-20
+                        w-56 h-56
+                        bg-[#C8A45D]/30
+                        rounded-full blur-3xl">
+            </div>
+
+
+            <div class="relative text-center max-w-2xl mx-auto mb-8">
+
+                <p class="text-[#66716B] leading-7 text-sm sm:text-base">
+                    Discover the rich flavors of Afghanistan and enjoy
+                    traditional dishes during your journey through Bamyan.
+                </p>
+
+            </div>
+
+
+            <!-- Food Cards -->
+
+            <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+
+
+                <!-- Food Card 1 -->
+
+                <div class="group bg-white/70
+                            backdrop-blur-lg
+                            border border-[#C8A45D]
+                            rounded-2xl
+                            overflow-hidden
+                            shadow-sm
+                            hover:shadow-xl
+                            hover:-translate-y-2
+                            transition-all duration-500">
+
+                    <div class="relative h-48 sm:h-52 overflow-hidden">
+
+                        <img src="https://i3.delgarm.com/i3/844/50501/6a61d4af7e021.jpg"
+                            alt="Traditional Afghan rice dish"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2924]/60 via-transparent to-transparent"></div>
+
+                        <span class="absolute top-3 left-3 bg-[#F5FAF7]/90 backdrop-blur-md text-[#66716B] text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Traditional
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h4 class="text-lg font-bold text-[#1F2924] mb-2">
+                            🍚 Kabuli Pulao
+                        </h4>
+
+                        <p class="text-sm text-[#66716B] leading-6">
+                            A famous Afghan rice dish prepared with
+                            tender meat, carrots and raisins.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+
+                            <span class="text-xs text-[#245C45] font-semibold">
+                                Afghan Cuisine
+                            </span>
+
+                            <span class="text-lg">⭐</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Food Card 2 -->
+
+                <div class="group bg-white/70
+                            backdrop-blur-lg
+                            border border-[#C8A45D]
+                            rounded-2xl
+                            overflow-hidden
+                            shadow-sm
+                            hover:shadow-xl
+                            hover:-translate-y-2
+                            transition-all duration-500">
+
+                    <div class="relative h-48 sm:h-52 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80"
+                            alt="Mantu dumplings"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2924]/60 via-transparent to-transparent"></div>
+
+                        <span class="absolute top-3 left-3 bg-[#F5FAF7]/90 backdrop-blur-md text-[#66716B] text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Popular
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h4 class="text-lg font-bold text-[#1F2924] mb-2">
+                            🥟 Mantu
+                        </h4>
+
+                        <p class="text-sm text-[#66716B] leading-6">
+                            Delicious steamed dumplings filled with
+                            seasoned meat and served with yogurt sauce.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+
+                            <span class="text-xs text-[#245C45] font-semibold">
+                                Local Favorite
+                            </span>
+
+                            <span class="text-lg">❤️</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Food Card 3 -->
+
+                <div class="group bg-white/70
+                            backdrop-blur-lg
+                            border border-[#C8A45D]
+                            rounded-2xl
+                            overflow-hidden
+                            shadow-sm
+                            hover:shadow-xl
+                            hover:-translate-y-2
+                            transition-all duration-500">
+
+                    <div class="relative h-48 sm:h-52 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+                            alt="Afghan Ashak dumplings"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2924]/60 via-transparent to-transparent"></div>
+
+                        <span class="absolute top-3 left-3 bg-[#F5FAF7]/90 backdrop-blur-md text-[#66716B] text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Homemade
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h4 class="text-lg font-bold text-[#1F2924] mb-2">
+                            🥟 Ashak
+                        </h4>
+
+                        <p class="text-sm text-[#66716B] leading-6">
+                            Afghan dumplings filled with leeks and
+                            served with yogurt and tomato sauce.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+
+                            <span class="text-xs text-[#245C45] font-semibold">
+                                Afghan Cuisine
+                            </span>
+
+                            <span class="text-lg">🌿</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Food Card 4 -->
+
+                <div class="group bg-white/70
+                            backdrop-blur-lg
+                            border border-[#C8A45D]
+                            rounded-2xl
+                            overflow-hidden
+                            shadow-sm
+                            hover:shadow-xl
+                            hover:-translate-y-2
+                            transition-all duration-500">
+
+                    <div class="relative h-48 sm:h-52 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?auto=format&fit=crop&w=800&q=80"
+                            alt="Afghan Bolani"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2924]/60 via-transparent to-transparent"></div>
+
+                        <span class="absolute top-3 left-3 bg-[#F5FAF7]/90 backdrop-blur-md text-[#66716B] text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Street Food
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h4 class="text-lg font-bold text-[#1F2924] mb-2">
+                            🫓 Bolani
+                        </h4>
+
+                        <p class="text-sm text-[#66716B] leading-6">
+                            A thin Afghan stuffed flatbread, commonly
+                            filled with potatoes, herbs and vegetables.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+
+                            <span class="text-xs text-[#245C45] font-semibold">
+                                Local Taste
+                            </span>
+
+                            <span class="text-lg">✨</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JOURNEY MAP ================= -->
+
+    <div class="w-full max-w-[1600px] mx-auto mt-10 md:mt-14 px-3 sm:px-4 md:px-6 lg:px-8">
+
+        <h3 class="text-xl sm:text-2xl font-bold text-[#1F2924] text-center mb-6 md:mb-8">
+            🗺️ Your Travel Journey
+        </h3>
+
+
+        <div class="relative
+                    bg-[#F5FAF7]/90
+                    backdrop-blur-xl
+                    border border-[#C8A45D]
+                    rounded-2xl md:rounded-3xl
+                    p-4 sm:p-6 md:p-8
+                    overflow-hidden">
+
+
+            <!-- Animated Road -->
+
+            <div class="hidden md:block absolute top-[105px] left-[8%] right-[8%]
+                        h-2 bg-[#EAF5EF] rounded-full">
+
+                <div class="h-full w-24 bg-[#2F7D5B] rounded-full animate-journey">
+                </div>
+
+            </div>
+
+
+            <!-- Journey Points -->
+
+            <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+
+
+                <!-- STEP 1 -->
+
+                <div class="text-center">
+
+                    <div class="mx-auto w-14 h-14 sm:w-16 sm:h-16
+                                flex items-center justify-center
+                                rounded-full
+                                bg-[#2F7D5B]
+                                border-4 border-[#EAF5EF]
+                                shadow-lg
+                                transition-all duration-500
+                                hover:scale-125">
+
+                        <span class="text-2xl sm:text-3xl">📍</span>
+
+                    </div>
+
+                    <h4 class="text-[#1F2924] font-bold mt-5">
+                        Kabul
+                    </h4>
+
+                    <p class="text-[#245C45] text-sm mt-2">
+                        Start Your Trip
+                    </p>
+
+                    <div class="mt-4 bg-[#EAF5EF] border border-[#C8A45D] rounded-xl p-3">
+
+                        <p class="text-[#66716B] text-xs leading-5">
+                            Begin your journey and prepare for an exciting adventure.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="text-center">
+
+                    <div class="mx-auto w-14 h-14 sm:w-16 sm:h-16
+                                flex items-center justify-center
+                                rounded-full
+                                bg-[#2F7D5B]
+                                border-4 border-[#EAF5EF]
+                                shadow-lg
+                                transition-all duration-500
+                                hover:scale-125">
+
+                        <span class="text-2xl sm:text-3xl">🚗</span>
+
+                    </div>
+
+                    <h4 class="text-[#1F2924] font-bold mt-5">
+                        Journey
+                    </h4>
+
+                    <p class="text-[#245C45] text-sm mt-2">
+                        Travel Through
+                    </p>
+
+                    <div class="mt-4 bg-[#EAF5EF] border border-[#C8A45D] rounded-xl p-3">
+
+                        <p class="text-[#66716B] text-xs leading-5">
+                            Enjoy the road, beautiful landscapes and local culture.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="text-center">
+
+                    <div class="mx-auto w-14 h-14 sm:w-16 sm:h-16
+                                flex items-center justify-center
+                                rounded-full
+                                bg-[#2F7D5B]
+                                border-4 border-[#EAF5EF]
+                                shadow-lg
+                                transition-all duration-500
+                                hover:scale-125">
+
+                        <span class="text-2xl sm:text-3xl">🏔️</span>
+
+                    </div>
+
+                    <h4 class="text-[#1F2924] font-bold mt-5">
+                        Herat
+                    </h4>
+
+                    <p class="text-[#245C45] text-sm mt-2">
+                        Explore & Discover
+                    </p>
+
+                    <div class="mt-4 bg-[#EAF5EF] border border-[#C8A45D] rounded-xl p-3">
+
+                        <p class="text-[#66716B] text-xs leading-5">
+                            Discover history, culture and the beautiful mountains.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div class="text-center">
+
+                    <div class="mx-auto w-14 h-14 sm:w-16 sm:h-16
+                                flex items-center justify-center
+                                rounded-full
+                                bg-[#2F7D5B]
+                                border-4 border-[#EAF5EF]
+                                shadow-lg
+                                transition-all duration-500
+                                hover:scale-125">
+
+                        <span class="text-2xl sm:text-3xl">🏞️</span>
+
+                    </div>
+
+                    <h4 class="text-[#1F2924] font-bold mt-5">
+                        Qala-e Ikhtiyaruddin
+                    </h4>
+
+                    <p class="text-[#245C45] text-sm mt-2">
+                        Final Destination
+                    </p>
+
+                    <div class="mt-4 bg-[#EAF5EF] border border-[#C8A45D] rounded-xl p-3">
+
+                        <p class="text-[#66716B] text-xs leading-5">
+                            Relax beside the beautiful lakes and enjoy nature.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Distance Row -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-3
+                        text-center
+                        gap-5 sm:gap-3
+                        mt-8
+                        pt-6
+                        border-t border-[#EAF5EF]">
+
+                <div>
+
+                    <p class="text-[#66716B] text-xs">
+                        Kabul → Journey
+                    </p>
+
+                    <p class="text-[#1F2924] font-bold">
+                        Start
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p class="text-[#66716B] text-xs">
+                        Journey → Qala-e Ikhtiyaruddin
+                    </p>
+
+                    <p class="text-[#1F2924] font-bold">
+                        800–850 km
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p class="text-[#66716B] text-xs">
+                        Qala-e Ikhtiyaruddin
+                    </p>
+
+                    <p class="text-[#1F2924] font-bold">
+                        4-5 KM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MORE TOURS ================= -->
+
+    <div class="w-full max-w-[1600px] mx-auto mt-10 md:mt-14 px-3 sm:px-4 md:px-6 lg:px-8">
+
+        <p class="text-[#66716B] leading-7 font-bold mb-6">
+            FOR MORE TOURS
+        </p>
+
+
+        <div class="grid grid-cols-1
+                    xs:grid-cols-2
+                    sm:grid-cols-2
+                    md:grid-cols-3
+                    lg:grid-cols-5
+                    gap-5
+                    justify-items-center">
+
+
+            <!-- Card 1 -->
+
+            <div class="w-full max-w-[220px]
+                        bg-[#F5FAF7]
+                        border border-[#C8A45D]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-lg
+                        transition-all
+                        duration-500
+                        hover:-translate-y-2
+                        hover:shadow-2xl">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_m-P1QTDFnFSX7pomT7mgKt5lQbKSb4wu9x_Y-MMNcg&s=10"
+                    alt="Bamyan"
+                    class="w-full h-[170px] object-cover">
+
+                <div class="p-3">
+
+                    <div class="flex items-center gap-1">
+
+                        <h3 class="text-sm font-semibold text-[#1F2924]">
+                            The Buddhas of Bamiyan
+                        </h3>
+
+                        <span class="text-[#245C45] text-[10px]">●</span>
+
+                    </div>
+
+                    <p class="text-[8px] leading-3 text-[#66716B] mt-1">
+                        Discover the beautiful landscapes, culture,
+                        history, and attractions of Bamyan.
+                    </p>
+
+                    <div class="flex items-center justify-between mt-3">
+
+                        <div class="flex gap-3 text-[8px] text-[#66716B]">
+                            <span>♙ 24</span>
+                            <span>◉ 1.8K</span>
+                        </div>
+
+                        <a href="budadhas.html"
+                            class="bg-[#2F7D5B] text-[#1F2924] text-[8px] px-3 py-1 rounded-full hover:bg-[#C8A45D] transition">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+
+            <div class="w-full max-w-[220px]
+                        bg-[#F5FAF7]
+                        border border-[#C8A45D]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-lg
+                        transition-all duration-500
+                        hover:-translate-y-2
+                        hover:shadow-2xl">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvQ4VpQnxOOa8JWFDcadTbnDWUxEvRyszbxbJPZP1gyohbqdmAHqdintw&s=10"
+                    alt="Bala Hissar"
+                    class="w-full h-[170px] object-cover">
+
+                <div class="p-3">
+
+                    <div class="flex items-center gap-1">
+
+                        <h3 class="text-sm font-semibold text-[#1F2924]">
+                            Bala Hissar of Kabul
+                        </h3>
+
+                        <span class="text-[#245C45] text-[10px]">●</span>
+
+                    </div>
+
+                    <p class="text-[8px] leading-3 text-[#66716B] mt-1">
+                        Explore the stunning blue lakes and natural
+                        beauty of Band-e Amir National Park.
+                    </p>
+
+                    <div class="flex items-center justify-between mt-3">
+
+                        <div class="flex gap-3 text-[8px] text-[#66716B]">
+                            <span>♙ 32</span>
+                            <span>◉ 2.4K</span>
+                        </div>
+
+                        <a href="balaHissar.html"
+                            class="bg-[#2F7D5B] text-[#1F2924] text-[8px] px-3 py-1 rounded-full hover:bg-[#C8A45D] transition">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+
+            <div class="w-full max-w-[220px]
+                        bg-[#F5FAF7]
+                        border border-[#C8A45D]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-lg
+                        transition-all duration-500
+                        hover:-translate-y-2
+                        hover:shadow-2xl">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMaYk9JggZzneULfFRuknJS_bAjrJsT_9pkAgEZE803Q&s=10"
+                    alt="Band-e Amir"
+                    class="w-full h-[170px] object-cover">
+
+                <div class="p-3">
+
+                    <div class="flex items-center gap-1">
+
+                        <h3 class="text-sm font-semibold text-[#1F2924]">
+                            Band Amir
+                        </h3>
+
+                        <span class="text-[#245C45] text-[10px]">●</span>
+
+                    </div>
+
+                    <p class="text-[8px] leading-3 text-[#66716B] mt-1">
+                        Explore the stunning blue lakes and natural
+                        beauty of Bala Hissar, Kabul.
+                    </p>
+
+                    <div class="flex items-center justify-between mt-3">
+
+                        <div class="flex gap-3 text-[8px] text-[#66716B]">
+                            <span>♙ 32</span>
+                            <span>◉ 2.4K</span>
+                        </div>
+
+                        <a href="Band_Amir.html"
+                            class="bg-[#2F7D5B] text-[#1F2924] text-[8px] px-3 py-1 rounded-full hover:bg-[#C8A45D] transition">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+
+            <div class="w-full max-w-[220px]
+                        bg-[#F5FAF7]
+                        border border-[#C8A45D]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-lg
+                        transition-all duration-500
+                        hover:-translate-y-2
+                        hover:shadow-2xl">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBojGg0kOdWA3KmocRz06rdToNqTfgk1Bi0PfB-Mr1JQ&s=10"
+                    alt="Shahr-e Gholghola"
+                    class="w-full h-[170px] object-cover">
+
+                <div class="p-3">
+
+                    <div class="flex items-center gap-1">
+
+                        <h3 class="text-sm font-semibold text-[#1F2924]">
+                            Shahr-e Gholghola
+                        </h3>
+
+                        <span class="text-[#245C45] text-[10px]">●</span>
+
+                    </div>
+
+                    <p class="text-[8px] leading-3 text-[#66716B] mt-1">
+                        Discover the beautiful landscapes, culture,
+                        history, and attractions of Herat.
+                    </p>
+
+                    <div class="flex items-center justify-between mt-3">
+
+                        <div class="flex gap-3 text-[8px] text-[#66716B]">
+                            <span>♙ 24</span>
+                            <span>◉ 198K</span>
+                        </div>
+
+                        <a href="qolqola.html"
+                            class="bg-[#2F7D5B] text-[#1F2924] text-[8px] px-3 py-1 rounded-full hover:bg-[#C8A45D] transition">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 5 -->
+
+            <div class="w-full max-w-[220px]
+                        bg-[#F5FAF7]
+                        border border-[#C8A45D]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-lg
+                        transition-all duration-500
+                        hover:-translate-y-2
+                        hover:shadow-2xl">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUfUTjYA_7y6GaTgbI2eps3QytvF0ng35Pji0uIO3NvxjJZNpVh0a6qafU&s=10"
+                    alt="Ghazni Minarets"
+                    class="w-full h-[170px] object-cover">
+
+                <div class="p-3">
+
+                    <div class="flex items-center gap-1">
+
+                        <h3 class="text-sm font-semibold text-[#1F2924]">
+                            Ghazni Minarets
+                        </h3>
+
+                        <span class="text-[#245C45] text-[10px]">●</span>
+
+                    </div>
+
+                    <p class="text-[8px] leading-3 text-[#66716B] mt-1">
+                        Explore the stunning blue lakes and natural
+                        beauty of Ghazni.
+                    </p>
+
+                    <div class="flex items-center justify-between mt-3">
+
+                        <div class="flex gap-3 text-[8px] text-[#66716B]">
+                            <span>♙ 32</span>
+                            <span>◉ 2.4K</span>
+                        </div>
+
+                        <a href="band-e-amir.html"
+                            class="bg-[#2F7D5B] text-[#1F2924] text-[8px] px-3 py-1 rounded-full hover:bg-[#C8A45D] transition">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="w-full mt-12 md:mt-16">
+
+        <div class="relative w-full overflow-hidden rounded-t-[30px] md:rounded-t-[40px]">
+
+
+            <!-- Background Image -->
+
+            <img src="imag/BANDAMIR1.jfif"
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover">
+
+
+            <!-- Dark Overlay -->
+
+            <div class="absolute inset-0 bg-[#1F2924]/80"></div>
+
+
+            <!-- Content -->
+
+            <div class="relative z-10
+                        px-4 sm:px-6 md:px-12 lg:px-20
+                        pt-10 sm:pt-16
+                        pb-8 md:pb-10">
+
+
+                <!-- TOP CONTENT -->
+
+                <div class="flex flex-col lg:flex-row
+                            justify-between
+                            items-start lg:items-center
+                            gap-8 lg:gap-10">
+
+
+                    <!-- Logo + Text -->
+
+                    <div class="max-w-xl">
+
+                        <p class="text-[#C8A45D]
+                                  text-xs sm:text-sm
+                                  font-semibold
+                                  uppercase
+                                  tracking-[3px] sm:tracking-[5px]
+                                  mb-4">
+                            Travel Afghanistan
+                        </p>
+
+                        <h2 class="text-4xl sm:text-6xl md:text-8xl
+                                   font-black
+                                   tracking-[5px] sm:tracking-[10px]
+                                   text-white
+                                   leading-none">
+                            AF TOURISM
+                        </h2>
+
+                        <p class="mt-5 md:mt-6
+                                  text-white/80
+                                  text-sm md:text-base
+                                  leading-7
+                                  max-w-lg">
+                            Discover breathtaking landscapes, ancient history,
+                            rich culture and unforgettable journeys across
+                            Afghanistan.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CTA -->
+
+                    <div class="w-full lg:w-auto">
+
+                        <a href="home.html"
+                            class="group inline-flex items-center
+                                   justify-between
+                                   gap-8
+                                   w-full lg:w-auto
+                                   px-6 sm:px-7 py-4 sm:py-5
+                                   rounded-2xl
+                                   bg-white
+                                   text-[#245C45]
+                                   font-bold
+                                   shadow-2xl
+                                   hover:bg-[#C8A45D]
+                                   transition duration-300">
+
+                            <span>Home</span>
+
+                            <span class="text-2xl group-hover:translate-x-2 transition duration-300">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GLASS PANEL -->
+
+                <div class="mt-10 md:mt-16
+                            rounded-2xl md:rounded-[30px]
+                            bg-white/10
+                            backdrop-blur-xl
+                            border border-white/20
+                            p-5 sm:p-7 md:p-10">
+
+
+                    <div class="grid grid-cols-1
+                                sm:grid-cols-2
+                                lg:grid-cols-3
+                                gap-8 md:gap-10">
+
+
+                        <!-- DESTINATIONS -->
+
+                        <div>
+
+                            <h3 class="text-white font-bold text-lg mb-5">
+                                Destinations
+                            </h3>
+
+                            <ul class="space-y-3 text-sm">
+
+                                <li>
+                                    <a href="#" class="text-white/70 hover:text-white transition">
+                                        Kabul
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-white/70 hover:text-white transition">
+                                        Bamyan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-white/70 hover:text-white transition">
+                                        Band-e Amir
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-white/70 hover:text-white transition">
+                                        Herat
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- SERVICES -->
+
+                        <div>
+
+                            <h3 class="text-white font-bold text-lg mb-5">
+                                Services
+                            </h3>
+
+                            <ul class="space-y-3 text-sm">
+
+                                <li class="text-white/70">
+                                    Hotel Booking
+                                </li>
+
+                                <li class="text-white/70">
+                                    Transportation
+                                </li>
+
+                                <li class="text-white/70">
+                                    Tour Guide
+                                </li>
+
+                                <li class="text-white/70">
+                                    Travel Planning
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- CONTACT -->
+
+                        <div>
+
+                            <h3 class="text-white font-bold text-lg mb-5">
+                                Contact
+                            </h3>
+
+                            <div class="space-y-4">
+
+                                <div class="flex gap-3">
+                                    <span class="text-[#C8A45D]">📍</span>
+
+                                    <p class="text-sm text-white/75">
+                                        Kabul, Afghanistan
+                                    </p>
+                                </div>
+
+
+                                <div class="flex gap-3">
+                                    <span class="text-[#C8A45D]">✉</span>
+
+                                    <p class="text-sm text-white/75 break-all">
+                                        info@safar.com
+                                    </p>
+                                </div>
+
+
+                                <div class="flex gap-3">
+                                    <span class="text-[#C8A45D]">☎</span>
+
+                                    <p class="text-sm text-white/75">
+                                        +93 700 000 000
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Social Icons -->
+
+                            <div class="flex gap-3 mt-6">
+
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-sm hover:bg-white hover:text-[#245C45] transition">
+                                    f
+                                </a>
+
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-sm hover:bg-white hover:text-[#245C45] transition">
+                                    ▶
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM -->
+
+                <div class="mt-8 md:mt-10
+                            pt-6
+                            border-t border-white/20
+                            flex flex-col md:flex-row
+                            justify-between
+                            items-center
+                            text-center md:text-left
+                            gap-4">
+
+                    <p class="text-xs text-white/50">
+                        © 2026 AF TOURISM — Discover Afghanistan
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+

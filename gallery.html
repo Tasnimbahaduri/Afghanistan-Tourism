@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afghanistan turisem</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="relative z-50 max-w-9xl mx-auto px-4">
+
+        <div class="relative
+                bg-white/70
+                backdrop-blur-2xl
+                border border-white/60
+                shadow-xl shadow-[#1F2924]/10
+                rounded-2xl
+                px-5 md:px-7
+                py-3">
+
+            <!-- Decorative Glow -->
+            <div class="absolute -top-10 -right-10
+                    w-32 h-32
+                    bg-[#2F7D5B]/20
+                    rounded-full
+                    blur-3xl
+                    pointer-events-none">
+            </div>
+
+
+            <!-- Header Content -->
+            <div class="relative flex items-center justify-between gap-6">
+
+
+                <!-- ================= LOGO ================= -->
+                <a href="#" class="flex items-center gap-3 shrink-0">
+
+                    <!-- Logo Icon -->
+                    <div class="w-11 h-11
+                            rounded-xl
+                            bg-[#2F7D5B]
+                            flex items-center justify-center
+                            shadow-md shadow-[#2F7D5B]/30">
+
+                        <span class="text-white text-xl font-black">
+                            AF
+                        </span>
+
+                    </div>
+
+
+                    <!-- Logo Text -->
+                    <div class="leading-none">
+
+                        <h1 class="text-2xl md:text-3xl
+                               font-black
+                               tracking-[0.18em]
+                               text-[#1F2924]">
+                            AF TOURISM
+                        </h1>
+
+                        <p class="text-[9px]
+                              tracking-[0.3em]
+                              text-[#66716B]
+                              mt-1">
+                            AFGHANISTAN
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ================= NAVIGATION ================= -->
+                <nav class="hidden md:flex items-center gap-1">
+
+                    <a href="home.html" class="px-4 py-2
+                          rounded-xl
+                          text-sm font-semibold
+                          text-[#66716B]
+                          hover:bg-[#EAF5EF]
+                          hover:text-[#1F2924]
+                          transition-all duration-300">
+                        Home
+                    </a>
+
+                    <a href="Tours.html" class="px-4 py-2
+                          rounded-xl
+                          text-sm font-semibold
+                          text-[#66716B]
+                          hover:bg-[#EAF5EF]
+                          hover:text-[#1F2924]
+                          transition-all duration-300">
+                        Tours
+                    </a>
+
+                    <a href="gallery.html" class="px-4 py-2
+                          rounded-xl
+                          text-sm font-semibold
+                          text-[#66716B]
+                          hover:bg-[#EAF5EF]
+                          hover:text-[#1F2924]
+                          transition-all duration-300">
+                        Gallery
+                    </a>
+
+                    <a href="culture.html" class="px-4 py-2
+                          rounded-xl
+                          text-sm font-semibold
+                          text-[#66716B]
+                          hover:bg-[#EAF5EF]
+                          hover:text-[#1F2924]
+                          transition-all duration-300">
+                        Culture
+                    </a>
+
+                    <a href="./contact.html" class="px-4 py-2
+                          rounded-xl
+                          text-sm font-semibold
+                          text-[#66716B]
+                          hover:bg-[#EAF5EF]
+                          hover:text-[#1F2924]
+                          transition-all duration-300">
+                        About
+                    </a>
+
+                </nav>
+
+
+                <!-- ================= RIGHT SIDE ================= -->
+                <div class="flex items-center gap-2">
+
+                    <!-- Language -->
+                    <button class="hidden sm:flex items-center gap-2
+                           px-3 py-2
+                           rounded-xl
+                           border border-[#EAF5EF]
+                           bg-[#F5FAF7]/70
+                           text-sm font-semibold
+                           text-[#66716B]
+                           hover:bg-[#EAF5EF]
+                           transition-all duration-300">
+
+                        <span>🌐</span>
+                        <span>EN</span>
+
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden
+                           w-10 h-10
+                           rounded-xl
+                           bg-[#EAF5EF]
+                           border border-[#EAF5EF]
+                           flex items-center
+                           justify-center
+                           text-[#66716B]
+                           text-xl">
+
+                        ☰
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+          <!-- Hero Section -->
+    <section class="gallery-hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">DISCOVER AFGHANISTAN</p>
+
+            <h1>A Journey Through <span>Afghanistan</span></h1>
+
+            <p>
+                Explore the beauty, history, cities, and traditional culture
+                of Afghanistan through our visual gallery.
+            </p>
+
+            <a href="#gallery" class="hero-button">
+                Explore Gallery
+            </a>
+
+        </div>
+
+    </section>
+   <main id="gallery">
+
+        <section class="gallery-section">
+
+            <div class="section-heading">
+                <p>EXPLORE OUR COLLECTION</p>
+
+                <h2>Stories of Afghanistan</h2>
+
+                <span></span>
+            </div>
+    <!-- Filter Buttons -->
+            <div class="filter-buttons">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="nature">
+                    Nature
+                </button>
+
+                <button class="filter-btn" data-filter="history">
+                    Historical Places
+                </button>
+
+                <button class="filter-btn" data-filter="cities">
+                    Cities
+                </button>
+
+                <button class="filter-btn" data-filter="culture">
+                    Traditional Culture
+                </button>
+
+            </div>
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+
+
+                <!-- Nature -->
+                <div class="gallery-card" data-category="nature">
+                 <img src="https://images.pexels.com/photos/37149268/pexels-photo-37149268.jpeg" alt="Nature Image 1">
+                  <div class="card-overlay">
+
+                        <p>Nature</p>
+
+                        <h3>Mountain Landscapes</h3>
+
+                        <span>Discover Afghanistan's natural beauty</span>
+
+                    </div>
+
+                </div>
+                 <!-- Nature -->
+                <div class="gallery-card" data-category="nature">
+
+                    <img
+                        src="https://images.pexels.com/photos/1461380/pexels-photo-1461380.jpeg"
+                        alt="Beautiful Afghan Landscape"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Nature</p>
+
+                        <h3>Peaceful Landscapes</h3>
+
+                        <span>Nature beyond imagination</span>
+
+                    </div>
+
+                </div>
+
+     <!-- Historical -->
+                <div class="gallery-card" data-category="history">
+
+                    <img
+                        src="https://images.pexels.com/photos/38037103/pexels-photo-38037103.jpeg"
+                        alt="Historical Place"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Historical Places</p>
+
+                        <h3>Ancient Heritage</h3>
+
+                        <span>Stories from Afghanistan's past</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Historical -->
+                <div class="gallery-card" data-category="history">
+
+                    <img
+                        src="https://images.pexels.com/photos/18411580/pexels-photo-18411580.jpeg"
+                        alt="Historic Architecture"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Historical Places</p>
+
+                        <h3>Historic Architecture</h3>
+
+                        <span>A journey through history</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cities -->
+                <div class="gallery-card" data-category="cities">
+
+                    <img
+                        src="https://images.pexels.com/photos/12760949/pexels-photo-12760949.jpeg"
+                        alt="Afghan City"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Cities</p>
+
+                        <h3>Life in Afghan Cities</h3>
+
+                        <span>Modern life and beautiful streets</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cities -->
+                <div class="gallery-card" data-category="cities">
+
+                    <img
+                        src="https://images.pexels.com/photos/18776351/pexels-photo-18776351.jpeg"
+                        alt="City Street"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Cities</p>
+
+                        <h3>Urban Stories</h3>
+
+                        <span>Discover the spirit of Afghan cities</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Culture -->
+                <div class="gallery-card" data-category="culture">
+
+                    <img
+                        src="https://images.pexels.com/photos/35594740/pexels-photo-35594740.jpeg"
+                        alt="Traditional Culture"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Traditional Culture</p>
+
+                        <h3>Afghan Traditions</h3>
+
+                        <span>Culture passed from generation to generation</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Culture -->
+                <div class="gallery-card" data-category="culture">
+
+                    <img
+                        src="https://images.pexels.com/photos/18409136/pexels-photo-18409136.jpeg"
+                        alt="Afghan Traditional Art"
+                    >
+
+                    <div class="card-overlay">
+
+                        <p>Traditional Culture</p>
+
+                        <h3>Art & Tradition</h3>
+
+                        <span>The beauty of Afghan heritage</span>
+
+                    </div>
+
+                </div>
+                <!-- Nature -->
+<div class="gallery-card" data-category="nature">
+
+    <img
+        src="https://images.pexels.com/photos/39579293/pexels-photo-39579293.jpeg"
+        alt="Afghan Mountains"
+    >
+
+    <div class="card-overlay">
+
+        <p>Nature</p>
+
+        <h3>Majestic Mountains</h3>
+
+        <span>Explore Afghanistan's stunning mountains</span>
+
+    </div>
+
+</div>
+
+
+<!-- Nature -->
+<div class="gallery-card" data-category="nature">
+
+    <img
+        src="https://images.pexels.com/photos/12232533/pexels-photo-12232533.jpeg"
+        alt="Afghan Valley"
+    >
+
+    <div class="card-overlay">
+
+        <p>Nature</p>
+
+        <h3>Beautiful Valleys</h3>
+
+        <span>Discover peaceful natural landscapes</span>
+
+    </div>
+
+</div>
+
+
+<!-- Historical -->
+<div class="gallery-card" data-category="history">
+
+    <img
+        src="https://images.pexels.com/photos/16870963/pexels-photo-16870963.jpeg"
+        alt="Ancient Architecture"
+    >
+
+    <div class="card-overlay">
+
+        <p>Historical Places</p>
+
+        <h3>Ancient Architecture</h3>
+
+        <span>A journey through Afghanistan's history</span>
+
+    </div>
+
+</div>
+
+
+<!-- Historical -->
+<div class="gallery-card" data-category="history">
+
+    <img
+        src="https://images.pexels.com/photos/34794105/pexels-photo-34794105.jpeg"
+        alt="Historic Monument"
+    >
+
+    <div class="card-overlay">
+
+        <p>Historical Places</p>
+
+        <h3>Historic Monuments</h3>
+
+        <span>Discover Afghanistan's rich heritage</span>
+
+    </div>
+
+</div>
+
+
+<!-- Cities -->
+<div class="gallery-card" data-category="cities">
+
+    <img
+        src="https://images.pexels.com/photos/19734670/pexels-photo-19734670.jpeg"
+        alt="Afghan City"
+    >
+
+    <div class="card-overlay">
+
+        <p>Cities</p>
+
+        <h3>City Life</h3>
+
+        <span>Experience the beauty of Afghan cities</span>
+
+    </div>
+
+</div>
+
+
+<!-- Cities -->
+<div class="gallery-card" data-category="cities">
+
+    <img
+        src="https://images.pexels.com/photos/26827877/pexels-photo-26827877.jpeg"
+        alt="City Landscape"
+    >
+
+    <div class="card-overlay">
+
+        <p>Cities</p>
+
+        <h3>Urban Landscapes</h3>
+
+        <span>Modern life and beautiful city views</span>
+
+    </div>
+
+</div>
+
+
+<!-- Traditional Culture -->
+<div class="gallery-card" data-category="culture">
+
+    <img
+        src="https://media.istockphoto.com/id/1474760510/photo/uzbek-national-dish-of-pilaf-and-samsa-on-dinner-table.jpg?b=1&s=612x612&w=0&k=20&c=dBrAcxTPsMtfnC3lx404T6ppaSqaVuD6M5qn3LIwBbc="
+        alt="Traditional Culture"
+    >
+
+    <div class="card-overlay">
+
+        <p>Traditional Culture</p>
+
+        <h3>Afghan Traditions</h3>
+
+        <span>Discover the beauty of Afghan culture</span>
+
+    </div>
+
+</div>
+
+
+<!-- Traditional Culture -->
+<div class="gallery-card" data-category="culture">
+
+    <img
+        src="https://media.istockphoto.com/id/1199016741/photo/the-traditions-the-colors-perfumes-in-the-eastern-markets.jpg?b=1&s=612x612&w=0&k=20&c=D4uf5saznEjShxE3yRg-kZKys-DYppAUOaozLWmr0g8="
+        alt="Traditional Clothing"
+    >
+
+    <div class="card-overlay">
+
+        <p>Traditional Culture</p>
+
+        <h3>Traditional Art</h3>
+
+        <span>Colors, crafts, and cultural traditions</span>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+  <footer class="w-full mt-16">
+
+    <!-- ================= FOOTER HERO ================= -->
+    <div class="relative w-full overflow-hidden rounded-t-[40px]">
+
+        <!-- Background Image -->
+        <img
+            src="imag/BANDAMIR1.jfif"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-[#062F38]/80"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-6 md:px-12 lg:px-20 pt-16 pb-10">
+
+            <!-- ================= TOP CONTENT ================= -->
+            <div class="flex flex-col lg:flex-row
+                        justify-between
+                        items-start lg:items-center
+                        gap-10">
+
+                <!-- Logo + Text -->
+                <div class="max-w-xl">
+
+                    <p class="text-[#A6E3E9]
+                              text-sm font-semibold
+                              uppercase tracking-[5px] mb-4">
+                        Travel Afghanistan
+                    </p>
+
+                    <h2 class="text-6xl md:text-8xl
+                               font-black
+                               tracking-[10px]
+                               text-white
+                               leading-none">
+                        AF TOURISM
+                    </h2>
+
+                    <p class="mt-6 text-white/80
+                              text-sm md:text-base
+                              leading-7 max-w-lg">
+                        Discover breathtaking landscapes, ancient history,
+                        rich culture and unforgettable journeys across
+                        Afghanistan.
+                    </p>
+
+                </div>
+
+
+                <!-- ================= QUICK CTA ================= -->
+                <div class="w-full lg:w-auto">
+
+                    <a href="home.html"
+                       class="group inline-flex items-center
+                              justify-between
+                              gap-8
+                              w-full lg:w-auto
+                              px-7 py-5
+                              rounded-2xl
+                              bg-white
+                              text-[#0F4C5C]
+                              font-bold
+                              shadow-2xl
+                              hover:bg-[#A6E3E9]
+                              transition duration-300">
+
+                        <span>
+                            Home
+                        </span>
+
+                        <span class="text-2xl
+                                     group-hover:translate-x-2
+                                     transition duration-300">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= GLASS PANEL ================= -->
+            <div class="mt-16
+                        rounded-[30px]
+                        bg-white/10
+                        backdrop-blur-xl
+                        border border-white/20
+                        p-7 md:p-10">
+
+                <div class="grid grid-cols-1
+                            sm:grid-cols-2
+                            lg:grid-cols-4
+                            gap-10">
+
+
+                   
+
+
+                    <!-- ================= DESTINATIONS ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Destinations
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Kabul
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Bamyan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Band-e Amir
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Herat
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= SERVICES ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Services
+                        </h3>
+
+                        <ul class="space-y-3 text-sm">
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Hotel Booking
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Transportation
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Tour Guide
+                            </p>
+                            </li>
+
+                            <li>
+                                <p 
+                                   class="text-white/70
+                                          hover:text-white
+                                          transition">
+                                    Travel Planning
+                            </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= CONTACT ================= -->
+                    <div>
+
+                        <h3 class="text-white
+                                   font-bold text-lg mb-5">
+                            Contact
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    📍
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    Kabul, Afghanistan
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    ✉
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    info@safar.com
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <span class="text-[#A6E3E9]">
+                                    ☎
+                                </span>
+
+                                <p class="text-sm text-white/75">
+                                    +93 700 000 000
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-3 mt-6">
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#0F4C5C]
+                                      transition">
+                                f
+                            </a>
+
+                            <a href="#"
+                               class="w-9 h-9
+                                      rounded-full
+                                      bg-white/10
+                                      border border-white/20
+                                      flex items-center justify-center
+                                      text-sm
+                                      hover:bg-white
+                                      hover:text-[#0F4C5C]
+                                      transition">
+                                ▶
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOTTOM ================= -->
+            <div class="mt-10
+                        pt-6
+                        border-t border-white/20
+                        flex flex-col md:flex-row
+                        justify-between
+                        items-center
+                        gap-4">
+
+                <p class="text-xs text-white/50">
+                    © 2026 AF TOURISM — Discover Afghanistan
+                </p>
+
+                
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
